@@ -233,3 +233,4 @@ class GpromsController:
             status="ready",
             message="gPROMS batch dispatcher is configured and ready."
         )
+

@@ -31,6 +31,7 @@ from .unisim.controller import UniSimController
 from .gproms.controller import GpromsController
 from .comsol.controller import ComsolController
 from .ansys.controller import AnsysController
+from .raebyes.circuit_breaker import CIRCUIT_BREAKER
 from .mcp.server import ALL_TOOLS, main as mcp_main
 
 
@@ -67,6 +68,7 @@ def get_system_status():
             "gproms_advanced_modeling": gp,
             "comsol_multiphysics": cs,
             "ansys_fluent_cfd": ans,
+            "raebyes_circuit_breaker": CIRCUIT_BREAKER.check_daemon_status(),
             "autocad_drafting": ac,
             "thermo_engine": {"status": "operational", "standards": ["ASME STEAM-TA", "Peng-Robinson EOS"]},
             "hydraulics_engine": {"status": "operational", "standards": ["Darcy-Weisbach", "ASME B36.10M", "Crane TP 410"]},
@@ -104,6 +106,7 @@ def main():
     subparsers.add_parser("gproms", help="Siemens gPROMS equation-oriented process modeling")
     subparsers.add_parser("comsol", help="COMSOL Multiphysics chemical reaction & transport simulation")
     subparsers.add_parser("ansys", help="Ansys Fluent & CFX reacting flow CFD simulation")
+    subparsers.add_parser("raebyes", help="RAEBYES physical invariant verification & circuit breaker")
     subparsers.add_parser("autocad", help="Autodesk AutoCAD 2025 drafting & vector tools")
     subparsers.add_parser("thermo", help="Rigorous thermodynamics (ASME Steam & Peng-Robinson)")
     subparsers.add_parser("hydraulics", help="Process hydraulics (Darcy-Weisbach, Pump TDH, NPSHa)")
@@ -157,6 +160,9 @@ def main():
     elif args.subsystem == "ansys":
         from .ansys.cli import main as ans_cli
         ans_cli()
+    elif args.subsystem == "raebyes":
+        from .raebyes.cli import main as rby_cli
+        rby_cli()
     elif args.subsystem == "autocad":
         from .autocad.cli import main as ac_cli
         ac_cli()

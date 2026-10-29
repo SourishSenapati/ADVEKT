@@ -78,3 +78,4 @@ def test_gproms_run_simulation_missing_exe():
     assert res["status"] in ["unlicensed_or_missing", "ready"]
     if res["status"] == "unlicensed_or_missing":
         assert res["epistemic_classification"] == "BLOCKED"
+

@@ -255,11 +255,24 @@ pv-cli nozzle --vessel-id 1200.0 --shell-t 10.0 --nozzle-od 168.3 --nozzle-t 7.1
 pv-cli hydro --pressure 10.0 --temp 120.0 --material "SA-240 316L"
 ```
 
+#### 10. RAEBYES Invariant Circuit Breaker (`raebyes-chemeng-cli`)
+*Protocol Specification:* [`SourishSenapati/RAEBYES`](https://github.com/SourishSenapati/RAEBYES)
+```bash
+# Check RAEBYES circuit-breaker and raebyesd daemon status
+raebyes-chemeng-cli status
+
+# Verify strict First-Principles mass conservation (tolerance < 1e-4)
+raebyes-chemeng-cli check-mass --inflow 1500.0 --outflow 1500.02 --tol 1e-4
+
+# Audit numerical array/tensor variance against flat mock detection
+raebyes-chemeng-cli check-variance --values "10.2, 12.5, 14.8, 18.2, 22.0" --min-var 1e-6
+```
+
 ---
 
 ## 6. Model Context Protocol (MCP) Integration
 
-`agentic-chemeng` exposes **57 Model Context Protocol (MCP) tools** conforming to JSON-RPC 2.0 (MCP specification 2024-11-05) across 16 chemical, mechanical, CAD, and CAE engineering domains:
+`agentic-chemeng` exposes **60 Model Context Protocol (MCP) tools** conforming to JSON-RPC 2.0 (MCP specification 2024-11-05) across 17 engineering domains:
 - **SolidWorks 2025** (9 tools)
 - **Aspen Plus V14** (6 tools)
 - **Aspen HYSYS** (4 tools)
@@ -272,6 +285,7 @@ pv-cli hydro --pressure 10.0 --temp 120.0 --material "SA-240 316L"
 - **Honeywell UniSim Design** (2 tools)
 - **DWSIM 8/9** (3 tools)
 - **Autodesk AutoCAD 2025** (3 tools)
+- **RAEBYES Invariant Circuit Breaker** (3 tools)
 - **ASME/PR Thermodynamics** (2 tools)
 - **Process Hydraulics** (3 tools)
 - **Industrial Thermal Design** (3 tools)

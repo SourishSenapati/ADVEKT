@@ -226,3 +226,4 @@ class ComsolController:
             status="ready",
             message="COMSOL batch solver dispatcher is ready."
         )
+

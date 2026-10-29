@@ -93,3 +93,4 @@ def test_ansys_run_journal_missing_exe():
     assert res["status"] in ["unlicensed_or_missing", "ready"]
     if res["status"] == "unlicensed_or_missing":
         assert res["epistemic_classification"] == "BLOCKED"
+

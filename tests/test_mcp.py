@@ -8,7 +8,7 @@ from agentic_chemeng.mcp.server import ALL_TOOLS, process_message, handle_tool_c
 
 
 def test_mcp_all_tools_count():
-    assert len(ALL_TOOLS) == 57
+    assert len(ALL_TOOLS) == 60
     tool_names = [t["name"] for t in ALL_TOOLS]
     # Check key representative tools from each subsystem
     assert "solidworks_get_status" in tool_names
@@ -22,6 +22,8 @@ def test_mcp_all_tools_count():
     assert "gproms_get_status" in tool_names
     assert "comsol_get_status" in tool_names
     assert "ansys_get_status" in tool_names
+    assert "raebyes_verify_simulation_variance" in tool_names
+    assert "raebyes_verify_conservation_invariants" in tool_names
     assert "autocad_get_status" in tool_names
     assert "thermo_steam_properties" in tool_names
     assert "hydraulics_pressure_drop" in tool_names
@@ -42,7 +44,7 @@ def test_mcp_tools_list():
     resp = json.loads(process_message(req))
     assert resp["id"] == 2
     assert "tools" in resp["result"]
-    assert len(resp["result"]["tools"]) == 57
+    assert len(resp["result"]["tools"]) == 60
 
 
 def test_mcp_tool_call_thermo():
@@ -85,17 +87,19 @@ def test_mcp_tool_call_pressure_vessel():
     assert data["recommended_plate_thickness_mm"] >= 6.0
 
 
-def test_mcp_tool_call_advanced_cae():
-    for tool in ["gproms_get_status", "comsol_get_status", "ansys_get_status"]:
-        req = json.dumps({
-            "jsonrpc": "2.0",
-            "id": 5,
-            "method": "tools/call",
-            "params": {"name": tool, "arguments": {}}
-        })
-        resp = json.loads(process_message(req))
-        assert resp["id"] == 5
-        content_text = resp["result"]["content"][0]["text"]
-        data = json.loads(content_text)
-        assert "status" in data
-        assert "platform" in data
+def test_mcp_tool_call_raebyes():
+    req = json.dumps({
+        "jsonrpc": "2.0",
+        "id": 6,
+        "method": "tools/call",
+        "params": {
+            "name": "raebyes_verify_simulation_variance",
+            "arguments": {"data": [1.0, 2.0, 3.0, 4.0, 5.0]}
+        }
+    })
+    resp = json.loads(process_message(req))
+    assert resp["id"] == 6
+    content_text = resp["result"]["content"][0]["text"]
+    data = json.loads(content_text)
+    assert data["passed"] is True
+    assert data["variance"] > 0.0

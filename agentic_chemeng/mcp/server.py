@@ -45,6 +45,7 @@ from ..comsol.controller import ComsolController
 from ..comsol.tools import COMSOL_TOOLS
 from ..ansys.controller import AnsysController
 from ..ansys.tools import ANSYS_TOOLS
+from ..raebyes.tools import RAEBYES_TOOLS, dispatch_raebyes_tool
 
 from ..thermo.equations import calculate_steam_properties, peng_robinson_eos
 from ..thermo.tools import THERMO_TOOLS
@@ -96,6 +97,7 @@ ALL_TOOLS = (
     GPROMS_TOOLS +
     COMSOL_TOOLS +
     ANSYS_TOOLS +
+    RAEBYES_TOOLS +
     THERMO_TOOLS +
     HYDRAULICS_TOOLS +
     THERMAL_TOOLS +
@@ -388,6 +390,8 @@ def handle_tool_call(tool_name, arguments):
         return dispatch_comsol_tool(comsol_controller, tool_name, arguments or {})
     elif tool_name.startswith("ansys_"):
         return dispatch_ansys_tool(ansys_controller, tool_name, arguments or {})
+    elif tool_name.startswith("raebyes_"):
+        return dispatch_raebyes_tool(tool_name, arguments or {})
     elif tool_name.startswith("autocad_"):
         return dispatch_autocad_tool(autocad_controller, tool_name, arguments or {})
     elif tool_name.startswith("thermo_"):
