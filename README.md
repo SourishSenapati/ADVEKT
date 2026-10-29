@@ -1,21 +1,96 @@
-# Agentic ChemEng (`agentic-chemeng`)
+```
+    ___     ____ _    __ ______ __ __ ______
+   /   |   / __ \ |  / // ____// //_//_  __/
+  / /| |  / / / / | / // __/  / ,<    / /   
+ / ___ | / /_/ /| |/ // /___ / /| |  / /    
+/_/  |_|/_____/ |___//_____//_/ |_| /_/     
+```
 
-**Autonomous Multi-Discipline Chemical & Mechanical Engineering CLI & MCP Tool Suite**  
+# ADVEKT (`advekt`)
+
+**Autonomous Multi-Discipline Chemical & Mechanical Engineering CAE Suite with Native RAEBYES Circuit Breaking**  
+*The Invariant Velocity Field of Continuous Matter*  
+
+[![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg?style=flat-square)](https://www.python.org/)
+[![MCP Server](https://img.shields.io/badge/MCP-60%20Tools%20(JSON--RPC%202.0)-8A2BE2.svg?style=flat-square)](https://modelcontextprotocol.io/)
+[![CLI Binaries](https://img.shields.io/badge/CLI-21%20Executables-00bcd4.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
+[![Tests Passing](https://img.shields.io/badge/tests-60%2F60%20passed%20(100%25)-brightgreen.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
+[![Circuit Breaker](https://img.shields.io/badge/RAEBYES-Invariant%20Protected-orange.svg?style=flat-square)](https://github.com/SourishSenapati/RAEBYES)
+[![License](https://img.shields.io/badge/license-Apache--2.0-green.svg?style=flat-square)](LICENSE)
+[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
+
 *Project Ref:* `FNQ-PR-2026-001`  
 *Lead Chemical & Process Engineer:* **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*)  
 *License:* Apache-2.0  
 
 ---
 
-## 1. Executive Overview
+## 1. The Cryptic Philosophy & Physical Cipher
 
-`agentic-chemeng` is a production-grade, standalone industrial engineering toolkit that bridges Large Language Models (LLMs), autonomous AI coding agents, and human process engineers with authentic, commercial and open-source Computer-Aided Design (CAD), Process Simulation (CAE), and First-Principles Engineering platforms.
+**ADVEKT** (/ædˈvɛkt/) is named after the fundamental **advection operator** of continuum mechanics and transport phenomena:
 
-Unlike superficial "vibe coding" approximations, `agentic-chemeng` enforces strict physical conservation laws (zero mass balance closure error), direct API bindings to licensed engineering software via Windows COM automation, and exact numerical solvers for ASME and TEMA mechanical/chemical standards.
+$$\mathbf{u} \cdot \nabla c \quad \text{and} \quad \rho (\mathbf{u} \cdot \nabla) \mathbf{u}$$
+
+In physical fluid dynamics, **advection** is the immutable velocity field that transports continuous matter, momentum, and enthalpy across physical boundaries. It is the realization of Heraclitus's continuum flux (*Panta Rhei*) strictly constrained by the conservation laws (*The Logos*). Continuous matter cannot be forged; mass cannot be hallucinated.
+
+In autonomous artificial intelligence, **ADVEKT** is the deterministic velocity field that propels AI coding agents (Claude, Cursor, Antigravity, Gemini) through rigorous chemical and mechanical engineering tasks without permitting them to drift into superficial "vibe coding," synthetic mock arrays, or unverified hallucinations.
+
+### The Anti-Hallucination Mandate
+Superficial AI coding assistants frequently fabricate plausible-sounding chemical yields, random pipe wall thicknesses, and synthetic temperature arrays. In industrial chemical plants, boiler islands, and high-pressure reactors, unverified numbers lead to catastrophic physical failure. 
+
+**ADVEKT eliminates hallucination through three inviolable architectural principles:**
+1. **Direct Software COM Automation:** On Windows, ADVEKT directly controls authentic, licensed CAD/CAE software (SolidWorks, Aspen Plus, Aspen HYSYS, AutoCAD, CHEMCAD, PRO/II) via official OLE/COM APIs.
+2. **Headless Linux Physics Solvers:** On Linux and cloud containers where COM is absent, ADVEKT dispatches exact, analytical, first-principles solvers (ASME Section VIII Div 1, Darcy-Weisbach Colebrook-White, ASME STEAM-TA steam tables, Peng-Robinson Cubic EOS, TEMA Kern shell-and-tube rating).
+3. **Hardwired Invariant Circuit Breaking:** Integrated natively with [`SourishSenapati/RAEBYES`](https://github.com/SourishSenapati/RAEBYES). If any AI-generated stream table violates conservation of mass ($\delta_{\text{mass}} \ge 10^{-4}$) or outputs flat synthetic arrays ($\operatorname{Var} < 10^{-6}$), the circuit breaker trips instantly, preventing corrupted data from entering downstream CAD models or fabrication drawings.
 
 ---
 
-## 2. Integrated Engineering Subsystems
+## 2. System Architecture & Dual Interfaces
+
+```
+                    ┌────────────────────────────────────────────────────────┐
+                    │                      A D V E K T                       │
+                    └───────────────────────────┬────────────────────────────┘
+                                                │
+                 ┌──────────────────────────────┴──────────────────────────────┐
+                 ▼                                                             ▼
+   ┌───────────────────────────┐                                 ┌───────────────────────────┐
+   │    HIGH-PERFORMANCE CLI   │                                 │     MCP SERVER ENGINE     │
+   │      (21 Executables)     │                                 │     (60 Tools JSON-RPC)   │
+   ├───────────────────────────┤                                 ├───────────────────────────┤
+   │  • advekt status (<0.2s)  │                                 │  • Claude Desktop         │
+   │  • solidworks-cli         │                                 │  • Cursor / Antigravity   │
+   │  • aspen-plus-cli / hysys │                                 │  • Gemini CLI / Copilot   │
+   │  • thermo-cli / pv-cli    │                                 │  • Stdio non-blocking     │
+   │  • hydraulics / thermal   │                                 │  • Zero zombie processes  │
+   └─────────────┬─────────────┘                                 └─────────────┬─────────────┘
+                 │                                                             │
+                 └──────────────────────────────┬──────────────────────────────┘
+                                                ▼
+     ┌──────────────────────────────────────────────────────────────────────────────────┐
+     │                     THE 17 ENGINEERING DISCIPLINES & SOLVERS                     │
+     ├────────────────────────────────────────┬─────────────────────────────────────────┤
+     │  Windows COM Automation (Live Apps):   │  Native Linux / POSIX Solvers (No COM): │
+     │  • Dassault Systèmes SOLIDWORKS 2025   │  • ASME STEAM-TA / PR-EOS Thermo        │
+     │  • Aspen Technology Aspen Plus V14     │  • ASME B36.10M / Crane TP 410 Flow     │
+     │  • Aspen Technology Aspen HYSYS        │  • TEMA / Kern Heat Exchanger Rating    │
+     │  • Chemstations CHEMCAD v7/v8          │  • ASME BPVC Section VIII Div 1 PV      │
+     │  • AVEVA SimSci PRO/II                 │  • Cantera Reaction Kinetics (Arrhenius)│
+     │  • Autodesk AutoCAD 2025               │  • DWSIM Open-Source Flowsheet XML      │
+     │  • Honeywell UniSim Design             │  • COMSOL & Ansys Fluent Headless Audits│
+     └────────────────────────────────────────┴─────────────────────────────────────────┘
+                                                │
+                                                ▼
+     ┌──────────────────────────────────────────────────────────────────────────────────┐
+     │                     NATIVE RAEBYES CIRCUIT BREAKER INTEGRATION                   │
+     │       Strict Invariant Enforcement: Zero Mass & Energy Closure Error (< 1e-4)    │
+     │       Non-Blocking Diagnostics: ROT inspection in < 0.2s | Memory-Leak Free      │
+     └──────────────────────────────────────────────────────────────────────────────────┘
+```
+
+---
+
+## 3. Subsystem Matrix & Supported Standards
 
 | Subsystem | Underlying Engine | Key Capabilities | Standards / Formats | Platform Support |
 | :--- | :--- | :--- | :--- | :--- |
@@ -27,7 +102,7 @@ Unlike superficial "vibe coding" approximations, `agentic-chemeng` enforces stri
 | **Cantera** | Cantera Chemical Physics Suite (Open-Source) | Chemical reaction kinetics (Arrhenius law), multi-component gas transport properties (Sutherland viscosity, thermal conductivity), Gibbs equilibrium | Cantera YAML / XML / CTI, Kinetic Theory of Gases | **Native Cross-Platform (Linux, macOS, Windows)** |
 | **UniSim Design** | Honeywell UniSim Design (`UniSimDesign.Application` COM) | Refining, gas processing, and petrochemical flowsheet inspection and property packages | `.usc`, `.hsc`, Peng-Robinson, Kabadi-Danner | Windows (COM) + Linux (Offline Inspection) |
 | **Siemens gPROMS** | Siemens / PSE gPROMS ProcessBuilder & ModelBuilder | Advanced equation-oriented process modeling, distributed systems (PDEs/DAEs), dynamic simulation, parameter estimation | `.gPJ`, `.gPA`, `.xml`, Custom DAEs, Catalytic / Polymer Systems | Windows (COM/CLI) + Linux (Offline Parsing) |
-| **COMSOL Multiphysics** | COMSOL Multiphysics Multiphysics Suite | Chemical reaction engineering (`cheq`), transport of diluted/concentrated species (`tds`/`tcs`), heat transfer in fluids (`ht`), laminar flow (`spf`) | `.mph`, Finite Element Analysis, Multiphysics Coupling | **Native Headless Inspection (Linux, macOS, Windows)** + Batch CLI |
+| **COMSOL Multiphysics** | COMSOL Multiphysics Suite | Chemical reaction engineering (`cheq`), transport of diluted/concentrated species (`tds`/`tcs`), heat transfer in fluids (`ht`), laminar flow (`spf`) | `.mph`, Finite Element Analysis, Multiphysics Coupling | **Native Headless Inspection (Linux, macOS, Windows)** + Batch CLI |
 | **Ansys Fluent & CFX** | Ansys Fluent & CFX Fluid Dynamics | Reacting flow CFD, finite-rate combustion kinetics, multi-component species transport, multiphase Eulerian/VOF/DPM | `.cas`, `.cas.gz`, `.cas.h5`, `.def`, `.cfx`, `.jou` | **Native Headless Inspection (Linux & Windows)** + Batch Journal Solver |
 | **DWSIM** | DWSIM Open-Source Simulator (v8/v9) | Open-source process simulation, CAPE-OPEN thermodynamics, XML flowsheet inspection, Rachford-Rice VLE flash | `.dwsim`, `.dwxml`, CoolProp, UNIFAC, IAPWS-IF97 | **Native Cross-Platform (Linux & Windows)** |
 | **AutoCAD** | Autodesk AutoCAD 2025 (`AutoCAD.Application` & `accoreconsole.exe`) | Automated P&ID and General Arrangement drafting, title block verification, layer auditing, headless DWG-to-PDF/DXF batch conversion | `.dwg`, `.dxf`, Vector PDF, ANSI/ISO title blocks | Windows (COM & accoreconsole) |
@@ -35,56 +110,254 @@ Unlike superficial "vibe coding" approximations, `agentic-chemeng` enforces stri
 | **Process Hydraulics** | First-Principles Hydraulics Engine | Darcy-Weisbach head loss, Colebrook-White friction factor (Newton-Raphson), ASME B36.10M standard pipe schedules, Crane TP 410 minor losses, Pump TDH, NPSHa, motor sizing | ASME B36.10M, Crane TP 410, Hydraulic Institute (HI) | **Native Cross-Platform (Pure Python / No COM Required)** |
 | **Thermal Design** | Industrial Heat Transfer Engine | TEMA E shell-and-tube heat exchanger rating (Kern method), LMTD & $F_T$ configuration correction, MVR falling-film evaporator mass/energy balances, compressor power & specific energy | TEMA 10th Ed Class C/R, Kern Method, MVR Industrial Design | **Native Cross-Platform (Pure Python / No COM Required)** |
 | **Pressure Vessels** | ASME Section VIII Div 1 Mechanical Engine | UG-27(c)(1) cylindrical shell thickness under internal pressure, UG-32(d) 2:1 ellipsoidal heads, UG-32(e) torispherical heads, UG-37 nozzle opening area replacement, UG-99 hydrostatic test pressure | ASME BPVC Section VIII Div 1, ASME Section II Part D | **Native Cross-Platform (Pure Python / No COM Required)** |
+| **RAEBYES Protocol** | Invariant Circuit Breaker Daemon | Strict mass/energy conservation enforcement ($\delta < 10^{-4}$), array/tensor variance floor auditing ($\operatorname{Var} > 10^{-6}$), process crash recovery | Circuit breaker tripping, tamper-evident JSON audit trail | **Native Cross-Platform (Pure Python / No COM Required)** |
 
 ---
 
-## 3. Industrial Resilience, Linux Compatibility & Low-Spec Performance
+## 4. The 60 Registered Model Context Protocol (MCP) Tools
 
-`agentic-chemeng` is engineered specifically to prevent crashes across **Linux, macOS, Windows**, and **resource-constrained legacy machines**:
+`advekt` exposes an exhaustive suite of **60 MCP tools** conforming strictly to the Model Context Protocol JSON-RPC 2.0 specification:
 
-1. **Full Linux / POSIX Compatibility:**
-   - In standard Python libraries, importing Windows COM (`pywin32`) on Linux causes fatal `ModuleNotFoundError` crashes. `agentic-chemeng` implements **dynamic platform detection (`IS_WINDOWS = sys.platform == 'win32'`)**:
-     * On Linux, macOS, and cloud Docker containers, COM imports are conditionally bypassed with zero runtime errors.
-     * All first-principles modules (Thermodynamics, Hydraulics, Thermal Design, ASME Pressure Vessels, DWSIM XML parsing, Cantera kinetics) run **100% natively on Linux**.
-     * Windows COM controllers (`SolidWorks`, `Aspen Plus`, `HYSYS`, `AutoCAD`, `CHEMCAD`, `PRO/II`) gracefully degrade on Linux to report structured JSON statuses with offline archive extraction capabilities.
-2. **Old & Low-Spec Machine Optimization:**
-   - **Non-Blocking Status Inquiries:** Querying application status (`agentic-chemeng status`) does *not* launch heavy 4 GB CAD/CAE applications into memory. It tests active ROT objects and OS registry signatures in `< 0.2s`, preventing RAM exhaustion on dual-core or 4 GB RAM laptops.
-   - **Wall-Clock Timeout Guardians:** All operations are wrapped in `run_with_timeout()`. If an older computer or slow mechanical HDD encounters an unresponsive application or modal popup, the execution thread is aborted safely after a configurable threshold (default: 20s) rather than freezing the system.
-   - **Strict Garbage Collection:** Explicit `gc.collect()` and COM pointer releases prevent memory leaks during batch calculations across thousands of streams or components.
-   - **Zero Process Leaks:** `cleanup_stale_processes()` terminates orphan background worker processes on both Windows (`taskkill`) and Linux (`pkill`).
+### Mechanical CAD & Automated Drafting (12 Tools)
+* **SolidWorks 2025** (9 tools):
+  1. `solidworks_get_status`: Inspect COM registration, ROT running instance, and version.
+  2. `solidworks_open_document`: Open `.SLDPRT`, `.SLDASM`, or `.SLDDRW` with silent configuration options.
+  3. `solidworks_close_document`: Close active document with optional save.
+  4. `solidworks_inspect_model`: Extract feature tree, solid bodies, custom metadata, and units.
+  5. `solidworks_get_mass_properties`: Compute mass (kg), volume ($m^3$), surface area ($m^2$), and Center of Gravity (CoG).
+  6. `solidworks_force_rebuild`: Trigger top-level parametric assembly/part rebuild.
+  7. `solidworks_render_view`: Render high-resolution isometric, front, or top viewport to PNG.
+  8. `solidworks_export_cad`: Export native geometry to `.STEP` (AP203/AP214) or drawing to vector `.PDF`.
+  9. `solidworks_execute_script`: Dispatch custom VBScript / VBA macro into SolidWorks kernel.
+* **Autodesk AutoCAD 2025** (3 tools):
+  10. `autocad_get_status`: Inspect AutoCAD COM server and `accoreconsole.exe` availability.
+  11. `autocad_plot_pdf`: Headless batch vector plot of `.DWG` layout to PDF.
+  12. `autocad_run_script`: Execute batch AutoLISP (`.lsp`) or command script (`.scr`).
+
+### Chemical Process Simulation & Flowsheeting (23 Tools)
+* **Aspen Plus V14** (6 tools):
+  13. `aspen_plus_get_status`: Verify Aspen Plus COM registration and active licenses.
+  14. `aspen_plus_open_simulation`: Load `.bkp`, `.apw`, or `.inp` case.
+  15. `aspen_plus_inspect_flowsheet`: Extract complete flowsheet topology, streams, and unit blocks.
+  16. `aspen_plus_get_stream_table`: Extract converged stream balance table (T, P, mass flow, vapor fraction).
+  17. `aspen_plus_get_block_data`: Extract block-level duty schedules, heat transfer rates, and separation parameters.
+  18. `aspen_plus_run_simulation`: Dispatch flowsheet solver calculation run.
+* **Aspen HYSYS** (4 tools):
+  19. `aspen_hysys_get_status`: Check HYSYS COM server connection.
+  20. `aspen_hysys_open_case`: Open `.hsc` simulation archive.
+  21. `aspen_hysys_inspect_case`: Extract streams, property packages, and flowsheet structure.
+  22. `aspen_hysys_solve`: Trigger steady-state or dynamic case solve.
+* **Chemstations CHEMCAD v7/v8** (3 tools):
+  23. `chemcad_get_status`: Verify CHEMCAD COM server availability.
+  24. `chemcad_inspect_flowsheet`: Inspect unit operations, streams, and batch distillation setups.
+  25. `chemcad_run_simulation`: Trigger flowsheet convergence run.
+* **AVEVA SimSci PRO/II** (3 tools):
+  26. `proii_get_status`: Verify PRO/II COM registration.
+  27. `proii_inspect_flowsheet`: Inspect flowsheet and thermodynamic components.
+  28. `proii_run_simulation`: Execute PRO/II batch calculation.
+* **Honeywell UniSim Design** (2 tools):
+  29. `unisim_get_status`: Check UniSim COM server registration.
+  30. `unisim_inspect_case`: Inspect simulation case (`.usc`, `.hsc`).
+* **DWSIM Simulator** (3 tools):
+  31. `dwsim_get_status`: Verify DWSIM executable, CAPE-OPEN libraries, and CoolProp bindings.
+  32. `dwsim_inspect_flowsheet`: Parse `.dwsim` / `.dwxml` XML topology without running GUI.
+  33. `dwsim_flash_calculation`: Perform isothermal/isobaric Rachford-Rice vapor-liquid flash.
+* **Cantera Chemical Kinetics** (3 tools):
+  34. `cantera_get_status`: Verify Cantera chemical physics environment.
+  35. `cantera_arrhenius_kinetics`: Calculate forward/reverse rate coefficients via Arrhenius parameters.
+  36. `cantera_gas_transport_properties`: Calculate multi-component Sutherland viscosity and thermal conductivity.
+
+### Advanced Multiphysics & CFD Solvers (9 Tools)
+* **Siemens gPROMS** (3 tools):
+  37. `gproms_get_status`: Verify gPROMS ProcessBuilder/ModelBuilder CLI.
+  38. `gproms_inspect_project`: Inspect `.gPJ`, `.gPA`, or `.xml` project hierarchy and DAE/PDE equations.
+  39. `gproms_run_simulation`: Dispatch dynamic simulation or parameter estimation run.
+* **COMSOL Multiphysics** (3 tools):
+  40. `comsol_get_status`: Check COMSOL batch engine and license.
+  41. `comsol_inspect_model`: Extract physics interfaces (`cheq`, `tds`, `ht`, `spf`), meshes, and study nodes from `.mph`.
+  42. `comsol_run_study`: Dispatch headless batch parametric sweep or study solve.
+* **Ansys Fluent & CFX** (3 tools):
+  43. `ansys_get_status`: Inspect Ansys environment variables (`AWP_ROOT`) and fluent solvers.
+  44. `ansys_inspect_case`: Inspect `.cas` / `.cas.gz` mesh dimensions and boundary conditions.
+  45. `ansys_run_journal`: Dispatch headless CFD calculation via `.jou` journal script.
+
+### First-Principles Engineering & Invariants (15 Tools)
+* **Thermodynamics Engine** (2 tools):
+  46. `thermo_steam_properties`: High-precision ASME STEAM-TA / IAPWS steam tables (T, P, h, s, v, $\rho$, latent heat).
+  47. `thermo_peng_robinson_eos`: Peng-Robinson Cubic EOS (Cardano analytical root solver, Z factor, fugacity coefficients).
+* **Process Hydraulics** (3 tools):
+  48. `hydraulics_pipe_dimensions`: Query ASME B36.10M / B36.19M pipe dimensional schedules (DN, OD, ID, thickness).
+  49. `hydraulics_pressure_drop`: Darcy-Weisbach head loss with Colebrook-White friction factor (Newton-Raphson).
+  50. `hydraulics_pump_head_npsha`: Total Dynamic Head (TDH), NPSHa, hydraulic power, and motor rating.
+* **Industrial Thermal Design** (3 tools):
+  51. `thermal_lmtd_calculation`: Logarithmic Mean Temperature Difference with multi-pass $F_T$ configuration correction.
+  52. `thermal_rate_tema_shell_and_tube`: Kern method rating for TEMA E shell-and-tube heat exchangers.
+  53. `thermal_mvr_evaporator_design`: Mechanical Vapor Recompression falling-film evaporator mass/energy balances and compressor power.
+* **ASME Pressure Vessels** (4 tools):
+  54. `pv_asme_ug27_shell`: ASME BPVC Section VIII Div 1 UG-27(c)(1) cylindrical shell thickness & MAWP under internal pressure.
+  55. `pv_asme_ug32_head`: ASME Section VIII Div 1 UG-32 2:1 ellipsoidal and torispherical formed heads.
+  56. `pv_asme_ug37_nozzle`: ASME Section VIII Div 1 UG-37 nozzle opening area replacement & reinforcement limits.
+  57. `pv_asme_ug99_hydro`: ASME Section VIII Div 1 UG-99(b) hydrostatic proof test pressure.
+* **RAEBYES Invariant Circuit Breaker** (3 tools):
+  58. `raebyes_verify_simulation_variance`: Guard against synthetic flat arrays ($\operatorname{Var}(\mathbf{X}) \ge \sigma^2_{\text{min}}$).
+  59. `raebyes_verify_conservation_invariants`: Enforce mass balance closure ($\delta_{\text{mass}} < 10^{-4}$).
+  60. `raebyes_get_circuit_breaker_status`: Read circuit breaker state, trip history, and diagnostic logs.
 
 ---
 
-## 4. Installation
+## 5. Governing Equations & Mathematical Formulations
+
+### 1. ASME Section VIII Division 1 Pressure Vessel Mechanics
+Under internal design pressure $P$, nominal design stress $S$, joint efficiency $E$, inside radius $R$, and corrosion allowance $t_c$:
+
+* **Cylindrical Shell (UG-27(c)(1)):**
+  $$t = \frac{P R}{S E - 0.6 P} + t_c, \quad \text{MAWP} = \frac{S E t}{R + 0.6 t}$$
+
+* **2:1 Ellipsoidal Formed Head (UG-32(d)):**
+  $$t = \frac{P D K}{2 S E - 0.2 P} + t_c \quad \text{where } K = \frac{1}{6}\left[2 + \left(\frac{D}{2h}\right)^2\right] = 1.0 \text{ for } \frac{D}{2h} = 2.0$$
+
+* **Torispherical Head (UG-32(e)):**
+  $$t = \frac{0.885 P L}{S E - 0.1 P} + t_c \quad (L = \text{inside crown radius})$$
+
+* **Nozzle Opening Reinforcement (UG-37):**
+  $$A_{\text{req}} = d \cdot t_r \cdot F$$
+  $$A_{\text{avail}} = A_1 (\text{excess shell}) + A_2 (\text{excess nozzle neck}) + A_4 (\text{weld fillets})$$
+  $$\text{Enforced Constraint: } A_{\text{avail}} \ge A_{\text{req}}$$
+
+* **Hydrostatic Proof Test Pressure (UG-99(b)):**
+  $$P_{\text{test}} = 1.3 \cdot P_{\text{design}} \cdot \left(\frac{S_{\text{test}}}{S_{\text{design}}}\right)$$
+
+### 2. Fluid Dynamics & Process Hydraulics
+* **Darcy-Weisbach Formulation:**
+  $$\Delta h_f = f \frac{L}{D} \frac{v^2}{2g}, \quad \Delta P_f = \rho g \Delta h_f$$
+
+* **Implicit Colebrook-White Friction Factor:**
+  $$\frac{1}{\sqrt{f}} = -2.0 \log_{10} \left( \frac{\epsilon / D}{3.7} + \frac{2.51}{\text{Re} \sqrt{f}} \right)$$
+  *Solved via 6-iteration Newton-Raphson down to $|f_{k+1} - f_k| < 10^{-8}$.*
+
+* **Total Dynamic Head (TDH) & Net Positive Suction Head Available (NPSHa):**
+  $$\text{TDH} = (z_{\text{disch}} - z_{\text{suct}}) + \frac{P_{\text{disch}} - P_{\text{suct}}}{\rho g} + \Delta h_{f,\text{total}}$$
+  $$\text{NPSHa} = \frac{P_{\text{suct,abs}} - P_v}{\rho g} + z_{\text{suct}} - h_{f,\text{suction}}$$
+  $$P_{\text{elec}} = \frac{\rho g Q \cdot \text{TDH}}{\eta_{\text{pump}} \eta_{\text{motor}}}$$
+
+### 3. High-Precision Thermodynamics
+* **Peng-Robinson Cubic Equation of State (1976):**
+  $$P = \frac{R T}{v - b} - \frac{a(T)}{v(v + b) + b(v - b)}$$
+  In cubic polynomial form for compressibility factor $Z$:
+  $$Z^3 - (1 - B) Z^2 + (A - 3B^2 - 2B) Z - (AB - B^2 - B^3) = 0$$
+  *Solved via closed-form analytical Cardano cubic root algorithm. Identifies liquid roots ($Z_L = \min Z$), vapor roots ($Z_V = \max Z$), and calculates component fugacity coefficients $\ln \phi_i$.*
+
+### 4. Industrial Thermal Design
+* **TEMA E Shell-and-Tube Exchanger (Kern Method):**
+  $$Q = U_o A_o \Delta T_{lm} F_T$$
+  $$\Delta T_{lm} = \frac{(T_{h,\text{in}} - T_{c,\text{out}}) - (T_{h,\text{out}} - T_{c,\text{in}})}{\ln\left(\frac{T_{h,\text{in}} - T_{c,\text{out}}}{T_{h,\text{out}} - T_{c,\text{in}}}\right)}$$
+
+* **Mechanical Vapor Recompression (MVR) Evaporator Balances:**
+  $$\dot{m}_{\text{evap}} = \dot{m}_{\text{feed}} \left(1 - \frac{x_{\text{feed}}}{x_{\text{prod}}}\right)$$
+  $$W_{\text{comp}} = \frac{\dot{m}_{\text{evap}} R T_1}{\eta_{\text{isen}} \frac{\gamma - 1}{\gamma}} \left[ \left(\frac{P_2}{P_1}\right)^{\frac{\gamma - 1}{\gamma}} - 1 \right]$$
+
+### 5. RAEBYES Invariant Circuit Breaker Criteria
+* **Mass Balance Conservation Invariant:**
+  $$\delta_{\text{mass}} = \frac{\left|\sum \dot{m}_{\text{in}} - \sum \dot{m}_{\text{out}}\right|}{\sum \dot{m}_{\text{in}}} < \epsilon_{\text{tol}} \quad (\epsilon_{\text{tol}} = 10^{-4})$$
+
+* **Synthetic Variance Floor Check (Flat Array Detection):**
+  $$\operatorname{Var}(\mathbf{X}) = \frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^2 \ge \sigma^2_{\text{min}} \quad (\sigma^2_{\text{min}} = 10^{-6})$$
+
+---
+
+## 6. Installation
 
 ```bash
 # Clone the repository
-git clone https://github.com/finnoaq/agentic-chemeng.git
-cd agentic-chemeng
+git clone https://github.com/SourishSenapati/ADVEKT.git
+cd ADVEKT
 
 # Install in editable mode
 pip install -e .
 
-# Or install with developer dependencies (pytest)
+# Or install with developer test dependencies
 pip install -e ".[dev]"
 ```
 
 ---
 
-## 5. Command-Line Interface (CLI) Usage
+## 7. Command-Line Interface (CLI) Guide
 
-### Unified Master Gateway
+ADVEKT provides **21 dedicated high-performance CLI executables** designed for headless scripts, CI/CD pipelines, and fast engineering terminals:
+
+### 1. Master Subsystem Gateway (`advekt`)
 ```bash
-# Query overall status across all installed engineering software
-agentic-chemeng status
+# Execute sub-200ms non-blocking status inquiry across all 17 engineering subsystems
+advekt status
 
-# Run MCP stdio server
-agentic-chemeng mcp
+# Start Model Context Protocol (MCP) JSON-RPC 2.0 stdio server
+advekt mcp
 ```
 
-### Dedicated Subsystem CLIs
+### 2. High-Precision Thermodynamics (`thermo-cli`)
+```bash
+# Saturated steam properties at 160.0°C (ASME STEAM-TA / IAPWS Formulation)
+thermo-cli steam --temp 160.0
 
-#### 1. Dassault Systèmes SOLIDWORKS (`solidworks-cli`)
+# Superheated steam properties at 40 bar, 500°C
+thermo-cli steam --pressure 40.0 --temp 500.0
+
+# Peng-Robinson Cubic EOS flash for hydrocarbon mixture
+thermo-cli pr-eos --compounds methane,ethane,propane --fractions 0.7,0.2,0.1 --temp 30.0 --pressure 45.0
+```
+
+### 3. Process Hydraulics & Pumps (`hydraulics-cli`)
+```bash
+# Query ASME B36.10M standard pipe dimensions (DN 100 Sch 40)
+hydraulics-cli pipe-dims 100 --schedule sch40
+
+# Darcy-Weisbach pressure drop across 120m carbon steel line
+hydraulics-cli pressure-drop --flow 45.0 --dn 100 --length 120.0 --roughness 0.045
+
+# Centrifugal pump Total Dynamic Head (TDH), NPSHa, and motor rating
+hydraulics-cli pump --flow 45.0 --static-head 15.0 --p-disch 3.5 --p-suct 0.2
+```
+
+### 4. Industrial Thermal Design (`thermal-cli`)
+```bash
+# Calculate LMTD and multi-pass configuration correction factor FT
+thermal-cli lmtd --th-in 120.0 --th-out 80.0 --tc-in 30.0 --tc-out 60.0 --passes 2
+
+# Rate TEMA E Shell-and-Tube heat exchanger via Kern method
+thermal-cli shell-and-tube --duty 450.0 --th-in 120.0 --th-out 80.0 --tc-in 30.0 --tc-out 60.0 --tubes 240 --length 4.0
+
+# Design MVR Falling Film Evaporator (area, compressor power, specific energy)
+thermal-cli mvr --feed-flow 1500.0 --feed-solids 5.0 --product-solids 35.0 --temp 80.0
+```
+
+### 5. ASME Section VIII Div 1 Pressure Vessels (`pv-cli`)
+```bash
+# Cylindrical shell wall thickness & MAWP (UG-27)
+pv-cli shell --pressure 10.0 --diameter 1200.0 --temp 120.0 --material "SA-240 316L" --joint-eff 1.0 --corrosion 1.5
+
+# 2:1 Ellipsoidal dished head thickness (UG-32)
+pv-cli head --pressure 10.0 --diameter 1200.0 --type ellipsoidal_2_1 --material "SA-240 316L"
+
+# Nozzle opening reinforcement check (UG-37)
+pv-cli nozzle --vessel-id 1200.0 --shell-t 10.0 --nozzle-od 168.3 --nozzle-t 7.11 --pressure 10.0
+
+# Hydrostatic proof test pressure calculation (UG-99)
+pv-cli hydro --pressure 10.0 --temp 120.0 --material "SA-240 316L"
+```
+
+### 6. RAEBYES Invariant Circuit Breaker (`raebyes-chemeng-cli`)
+```bash
+# Inspect circuit breaker trip state and telemetry
+raebyes-chemeng-cli status
+
+# Verify strict mass conservation invariant (< 1e-4 closure error)
+raebyes-chemeng-cli check-mass --inflow 1500.0 --outflow 1500.02 --tol 1e-4
+
+# Audit numerical array against flat synthetic mock detection
+raebyes-chemeng-cli check-variance --values "10.2, 12.5, 14.8, 18.2, 22.0" --min-var 1e-6
+```
+
+### 7. Dassault Systèmes SOLIDWORKS (`solidworks-cli`)
 ```bash
 # Check SolidWorks connection status
 solidworks-cli status
@@ -102,7 +375,7 @@ solidworks-cli render "path/to/part.sldprt" --view iso --out render.png
 solidworks-cli export "path/to/part.sldprt" --formats step,pdf
 ```
 
-#### 2. Aspen Plus (`aspen-plus-cli`)
+### 8. Aspen Plus V14 (`aspen-plus-cli`)
 ```bash
 # Check Aspen Plus COM registration and licensing state
 aspen-plus-cli status
@@ -115,200 +388,76 @@ aspen-plus-cli inspect
 
 # Retrieve converged stream balance table (T, P, mass flow, vapor fraction)
 aspen-plus-cli streams
-
-# Inspect specific unit operation block thermal duty
-aspen-plus-cli blocks --block-id EVAP-1
-```
-
-#### 3. Aspen HYSYS (`aspen-hysys-cli`)
-```bash
-# Check HYSYS COM server connectivity
-aspen-hysys-cli status
-
-# Open HYSYS simulation case (.hsc)
-aspen-hysys-cli open "path/to/rigorous_model.hsc"
-
-# Inspect streams and property packages
-aspen-hysys-cli inspect
-
-# Trigger flowsheet solver
-aspen-hysys-cli solve
-```
-
-#### 4. DWSIM Open-Source Simulator (`dwsim-cli`)
-```bash
-# Check DWSIM installation and supported CAPE-OPEN packages
-dwsim-cli status
-
-# Inspect DWSIM flowsheet file (.dwsim or .dwxml)
-dwsim-cli inspect "path/to/flowsheet.dwxml"
-
-# Perform isothermal/isobaric VLE flash calculation
-dwsim-cli flash --temp 95.0 --pressure 1.01325 --compounds Water,Ethanol --fractions 0.85,0.15
-```
-
-#### 5. Autodesk AutoCAD (`autocad-cli`)
-```bash
-# Check AutoCAD COM server and accoreconsole.exe
-autocad-cli status
-
-# Inspect DWG drawing (layers, layout tabs, blocks)
-autocad-cli inspect "path/to/pfd.dwg"
-
-# Headless batch export DWG to vector PDF
-autocad-cli export-pdf "path/to/pid.dwg" --out "path/to/pid.pdf"
-```
-
-#### 5. Honeywell UniSim Design (`unisim-cli`)
-```bash
-# Check UniSim COM connection status
-unisim-cli status
-
-# Inspect UniSim simulation case (.usc, .hsc)
-unisim-cli inspect "path/to/case.usc"
-```
-
-#### 6. Siemens gPROMS (`gproms-cli`)
-```bash
-# Check Siemens gPROMS environment & CLI
-gproms-cli status
-
-# Inspect gPROMS project file (.gPJ, .gPA, .xml)
-gproms-cli inspect "path/to/project.gPJ"
-
-# Run batch DAE/PDE simulation
-gproms-cli run "path/to/project.gPJ" --process ContinuousReaction --timeout 60
-```
-
-#### 7. COMSOL Multiphysics (`comsol-cli`)
-```bash
-# Check COMSOL Multiphysics installation & batch solver
-comsol-cli status
-
-# Inspect COMSOL model archive (.mph) for physics, geometries, studies, and parameters
-comsol-cli inspect "path/to/model.mph"
-
-# Dispatch headless batch study solve
-comsol-cli run "path/to/model.mph" --study std1 --output "path/to/solved.mph"
-```
-
-#### 8. Ansys Fluent & CFX (`ansys-cli`)
-```bash
-# Check Ansys Fluent / CFX environment variables (AWP_ROOT) & solver
-ansys-cli status
-
-# Inspect Fluent/CFX case (.cas, .cas.gz, .msh) for dimensions, mesh, and reacting flow models
-ansys-cli inspect "path/to/reactor.cas.gz"
-
-# Run headless CFD calculation via journal
-ansys-cli run "path/to/script.jou" --dimensions 3ddp --timeout 180
-```
-
-#### 9. Thermodynamics (`thermo-cli`)
-```bash
-# Calculate ASME STEAM-TA steam properties at 160°C
-thermo-cli steam --temp 160.0
-
-# Calculate saturation properties at 3.0 bar
-thermo-cli steam --pressure 3.0
-
-# Peng-Robinson Cubic EOS (compressibility factor Z & fugacity coefficients)
-thermo-cli pr-eos --compounds methane,ethane,propane --fractions 0.7,0.2,0.1 --temp 30.0 --pressure 45.0
-```
-
-#### 7. Process Hydraulics (`hydraulics-cli`)
-```bash
-# Look up ASME B36.10M standard pipe schedule dimensions (DN 100 Sch 40)
-hydraulics-cli pipe-dims 100 --schedule sch40
-
-# Compute Darcy-Weisbach pressure drop and velocity
-hydraulics-cli pressure-drop --flow 45.0 --dn 100 --length 120.0
-
-# Centrifugal Pump Total Dynamic Head (TDH), NPSHa, and motor rating
-hydraulics-cli pump --flow 45.0 --static-head 15.0 --p-disch 3.5 --p-suct 0.2
-```
-
-#### 8. Industrial Thermal Design (`thermal-cli`)
-```bash
-# Calculate Logarithmic Mean Temperature Difference (LMTD) & FT factor
-thermal-cli lmtd --th-in 120.0 --th-out 80.0 --tc-in 30.0 --tc-out 60.0
-
-# Rate TEMA E Shell-and-Tube heat exchanger via Kern method
-thermal-cli shell-and-tube --duty 450.0 --th-in 120.0 --th-out 80.0 --tc-in 30.0 --tc-out 60.0 --tubes 240 --length 4.0
-
-# Design MVR Falling Film Evaporator (area, compressor power, specific energy)
-thermal-cli mvr --feed-flow 1500.0 --feed-solids 5.0 --product-solids 35.0 --temp 80.0
-```
-
-#### 9. ASME Pressure Vessels (`pv-cli`)
-```bash
-# ASME Section VIII Div 1 UG-27(c)(1) cylindrical shell thickness & MAWP
-pv-cli shell --pressure 10.0 --diameter 1200.0 --temp 120.0 --material "SA-240 316L" --joint-eff 1.0 --corrosion 1.5
-
-# ASME Section VIII Div 1 UG-32 2:1 ellipsoidal dished head thickness
-pv-cli head --pressure 10.0 --diameter 1200.0 --type ellipsoidal_2_1 --material "SA-240 316L"
-
-# ASME Section VIII Div 1 UG-37 nozzle opening reinforcement check
-pv-cli nozzle --vessel-id 1200.0 --shell-t 10.0 --nozzle-od 168.3 --nozzle-t 7.11 --pressure 10.0
-
-# ASME Section VIII Div 1 UG-99(b) hydrostatic test pressure
-pv-cli hydro --pressure 10.0 --temp 120.0 --material "SA-240 316L"
-```
-
-#### 10. RAEBYES Invariant Circuit Breaker (`raebyes-chemeng-cli`)
-*Protocol Specification:* [`SourishSenapati/RAEBYES`](https://github.com/SourishSenapati/RAEBYES)
-```bash
-# Check RAEBYES circuit-breaker and raebyesd daemon status
-raebyes-chemeng-cli status
-
-# Verify strict First-Principles mass conservation (tolerance < 1e-4)
-raebyes-chemeng-cli check-mass --inflow 1500.0 --outflow 1500.02 --tol 1e-4
-
-# Audit numerical array/tensor variance against flat mock detection
-raebyes-chemeng-cli check-variance --values "10.2, 12.5, 14.8, 18.2, 22.0" --min-var 1e-6
 ```
 
 ---
 
-## 6. Model Context Protocol (MCP) Integration
+## 8. Python SDK Usage
 
-`agentic-chemeng` exposes **60 Model Context Protocol (MCP) tools** conforming to JSON-RPC 2.0 (MCP specification 2024-11-05) across 17 engineering domains:
-- **SolidWorks 2025** (9 tools)
-- **Aspen Plus V14** (6 tools)
-- **Aspen HYSYS** (4 tools)
-- **Siemens gPROMS** (3 tools)
-- **COMSOL Multiphysics** (3 tools)
-- **Ansys Fluent & CFX** (3 tools)
-- **Chemstations CHEMCAD** (3 tools)
-- **AVEVA SimSci PRO/II** (3 tools)
-- **Cantera Chemical Kinetics** (3 tools)
-- **Honeywell UniSim Design** (2 tools)
-- **DWSIM 8/9** (3 tools)
-- **Autodesk AutoCAD 2025** (3 tools)
-- **RAEBYES Invariant Circuit Breaker** (3 tools)
-- **ASME/PR Thermodynamics** (2 tools)
-- **Process Hydraulics** (3 tools)
-- **Industrial Thermal Design** (3 tools)
-- **ASME Pressure Vessels** (4 tools)
+In addition to CLI and MCP, `advekt` can be imported directly into Python applications:
 
-To add `agentic-chemeng` to Claude Desktop, Antigravity, or Cursor, configure your MCP client configuration (`claude_desktop_config.json`):
+```python
+import advekt
 
+# 1. High-Precision ASME Steam Tables
+steam = advekt.thermo.calculate_steam_properties(temperature_C=160.0, pressure_bar=6.18)
+print(f"Saturation Enthalpy (h_fg): {steam['latent_heat_hfg_kJ_kg']} kJ/kg")
+print(f"Liquid Density: {steam['liquid_density_kg_m3']} kg/m³")
+
+# 2. Process Hydraulics (Darcy-Weisbach & Colebrook-White)
+hyd = advekt.hydraulics.calculate_pressure_drop(
+    flow_m3_h=45.0,
+    dn_mm=100,
+    length_m=120.0,
+    roughness_mm=0.045
+)
+print(f"Friction Factor (f): {hyd['darcy_friction_factor']:.5f}")
+print(f"Total Pressure Drop: {hyd['pressure_drop_bar']:.3f} bar")
+
+# 3. ASME Section VIII Div 1 Cylindrical Shell
+shell = advekt.pressure_vessel.calculate_ug27_shell(
+    design_pressure_bar=10.0,
+    inside_diameter_mm=1200.0,
+    design_temp_C=120.0,
+    material="SA-240 316L",
+    joint_efficiency=1.0,
+    corrosion_allowance_mm=1.5
+)
+print(f"Required Shell Thickness: {shell['required_thickness_mm']:.2f} mm")
+print(f"Calculated MAWP: {shell['mawp_bar']:.2f} bar")
+
+# 4. RAEBYES Invariant Check
+guard = advekt.raebyes.verify_conservation_invariants(
+    total_inflow_kg_h=1500.0,
+    total_outflow_kg_h=1500.02,
+    tolerance=1e-4
+)
+assert guard["passed"] is True, "Circuit breaker tripped on mass balance closure error!"
+```
+
+---
+
+## 9. Model Context Protocol (MCP) Configuration
+
+Configure your AI coding assistant to use `advekt-mcp`:
+
+### Claude Desktop (`claude_desktop_config.json`)
 ```json
 {
   "mcpServers": {
-    "agentic-chemeng": {
-      "command": "chemeng-mcp",
+    "advekt": {
+      "command": "advekt-mcp",
       "args": []
     }
   }
 }
 ```
 
-Or run directly via python:
+### Cursor (`.cursor/settings.json`)
 ```json
 {
-  "mcpServers": {
-    "agentic-chemeng": {
+  "cursor.mcpServers": {
+    "advekt": {
       "command": "python",
       "args": ["-m", "agentic_chemeng.mcp.server"]
     }
@@ -318,22 +467,24 @@ Or run directly via python:
 
 ---
 
-## 7. Recommended Repository Names
+## 10. Low-Spec Optimization & Linux Resilience
 
-When establishing this standalone open-source or commercial product repository on GitHub / GitLab, the following naming options are recommended:
+`advekt` is engineered to operate reliably across **Linux, macOS, Windows**, and **legacy low-spec machines**:
 
-1. **`agentic-chemeng`** *(Recommended Primary)*  
-   *Rationale:* Direct, unambiguous descriptor uniting AI agentic workflows (`agentic`) with chemical and process engineering (`chemeng`). Immediate brand recognition in the AI for Science & Industrial Automation ecosystem.
-2. **`chemeng-agent`**  
-   *Rationale:* Concise, clean naming mirroring industry standards like `docker-agent` or `cad-agent`.
-3. **`open-agentic-cadcae`**  
-   *Rationale:* Highlights the multi-discipline scope spanning both mechanical CAD (SolidWorks, AutoCAD) and chemical CAE (Aspen Plus, HYSYS, DWSIM).
-4. **`finnoaq-agentic-eng`**  
-   *Rationale:* Enterprise branded nomenclature anchoring the toolsuite under FinnoaQ Agro-Industrial Technologies Ltd. governance.
+1. **Full Linux / POSIX Compatibility:**
+   - Detects `sys.platform == 'win32'` dynamically. Windows COM (`pywin32`) imports are conditionally bypassed on Linux without crashes.
+   - All first-principles modules (Thermodynamics, Hydraulics, Thermal Design, ASME Pressure Vessels, DWSIM XML parsing, Cantera kinetics) run **100% natively on Linux**.
+2. **Sub-200ms Non-Blocking Status Inquiries:**
+   - Querying system status (`advekt status`) tests active Running Object Table (ROT) registrations and OS registry keys in `< 0.2s` without launching heavy CAD/CAE applications into RAM.
+3. **Wall-Clock Timeout Guardians:**
+   - All external processes are wrapped in `run_with_timeout()`. If a slow HDD or hung application freezes, execution terminates cleanly after a configurable threshold (default: 20s).
+4. **Memory Management & Zero Process Leaks:**
+   - Explicit `gc.collect()` and COM pointer releases prevent memory accumulation.
+   - `cleanup_stale_processes()` kills orphan background workers on both Windows (`taskkill`) and Linux (`pkill`).
 
 ---
 
-## 8. Technical Verification & Standards Attribution
+## 11. Technical Standards Attribution
 
 - **Lead Chemical & Process Engineer:** Sourish Senapati (*FinnoaQ Agro-Industrial Technologies Ltd.*)
 - **Governing Project Reference:** `FNQ-PR-2026-001`
@@ -341,4 +492,4 @@ When establishing this standalone open-source or commercial product repository o
 - **Hydraulic Standards:** ASME B36.10M / B36.19M Welded and Seamless Wrought Steel Pipe, Crane Technical Paper No. 410, Hydraulic Institute (HI) Standards.
 - **Thermal Standards:** Tubular Exchanger Manufacturers Association (TEMA 10th Edition), Kern Method.
 - **Mechanical Standards:** ASME Boiler and Pressure Vessel Code (BPVC) Section VIII Division 1 (Rules for Construction of Pressure Vessels), Section II Part D (Materials - Properties).
-
+- **Circuit Breaker Protocol:** [`SourishSenapati/RAEBYES`](https://github.com/SourishSenapati/RAEBYES).

@@ -85,3 +85,4 @@ def dispatch_raebyes_tool(tool_name: str, args: Dict[str, Any]) -> Dict[str, Any
             "project_ref": "FNQ-PR-2026-001"
         }
     raise ValueError(f"Unknown RAEBYES tool: {tool_name}")
+

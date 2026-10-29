@@ -51,7 +51,7 @@ def get_system_status():
     ans = AnsysController().get_status()
 
     return {
-        "suite": "Agentic ChemEng Multi-Discipline Engineering Architecture",
+        "suite": "ADVEKT Autonomous Multi-Discipline Engineering Architecture",
         "version": "1.0.0",
         "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
         "project_ref": "FNQ-PR-2026-001",
@@ -83,8 +83,8 @@ def main():
         sys.stdout.reconfigure(encoding="utf-8")
 
     parser = argparse.ArgumentParser(
-        prog="agentic-chemeng",
-        description="Autonomous Multi-Discipline Chemical & Mechanical Engineering CLI Suite"
+        prog="advekt",
+        description="ADVEKT: Autonomous Multi-Discipline Chemical & Mechanical Engineering CAE Suite with Native RAEBYES Circuit Breaking"
     )
     subparsers = parser.add_subparsers(dest="subsystem", help="Engineering Subsystems")
 
