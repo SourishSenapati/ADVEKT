@@ -17,29 +17,38 @@ Unlike superficial "vibe coding" approximations, `agentic-chemeng` enforces stri
 
 ## 2. Integrated Engineering Subsystems
 
-| Subsystem | Underlying Engine | Key Capabilities | Standards / Formats |
-| :--- | :--- | :--- | :--- |
-| **SolidWorks** | Dassault Systèmes SOLIDWORKS 2025 SP1.2 (`SldWorks.Application`) | Parametric 3D solid modeling, feature tree traversal, assembly constraints, mass properties, high-res viewport rendering, STEP/PDF export | `.SLDPRT`, `.SLDASM`, `.SLDDRW`, `.STEP`, B-Rep solid math |
-| **Aspen Plus** | Aspen Technology Aspen Plus V14 (`Apwn.Document` OLE Services) | Rigorous flowsheet topology inspection, stream balance extraction, unit block duty schedules, live solver execution (`Run2`), offline converged audit | `.bkp`, `.apw`, `.inp`, ASME STEAM-TA, NRTL, ELECNRTL |
-| **Aspen HYSYS** | Aspen Technology Aspen HYSYS (`HYSYS.Application` COM) | Dynamic & steady-state hydrocarbon/chemical flowsheets, material/energy streams, unit operations, property packages | `.hsc`, Peng-Robinson, Sour PR, SRK, Glycol, Amines |
-| **DWSIM** | DWSIM Open-Source Simulator (v8/v9) | Open-source process simulation, CAPE-OPEN thermodynamics, XML flowsheet inspection, Rachford-Rice VLE flash | `.dwsim`, `.dwxml`, CoolProp, UNIFAC, IAPWS-IF97 |
-| **AutoCAD** | Autodesk AutoCAD 2025 (`AutoCAD.Application` & `accoreconsole.exe`) | Automated P&ID and General Arrangement drafting, title block verification, layer auditing, headless DWG-to-PDF/DXF batch conversion | `.dwg`, `.dxf`, Vector PDF, ANSI/ISO title blocks |
-| **Thermodynamics** | First-Principles Thermodynamics Engine | High-precision steam tables (ASME STEAM-TA / IAPWS), Peng-Robinson Cubic Equation of State (PR-EOS), analytical Cardano cubic root solver, fugacity coefficients, Wagner/Antoine vapor pressure | ASME 1967 Steam Tables, IAPWS Industrial Formulation, PR (1976) |
-| **Process Hydraulics** | First-Principles Hydraulics Engine | Darcy-Weisbach head loss, Colebrook-White friction factor (Newton-Raphson), ASME B36.10M standard pipe schedules, Crane TP 410 minor losses, Pump TDH, NPSHa, motor sizing | ASME B36.10M, Crane TP 410, Hydraulic Institute (HI) |
-| **Thermal Design** | Industrial Heat Transfer Engine | TEMA E shell-and-tube heat exchanger rating (Kern method), LMTD & $F_T$ configuration correction, MVR falling-film evaporator mass/energy balances, compressor power & specific energy | TEMA 10th Ed Class C/R, Kern Method, MVR Industrial Design |
-| **Pressure Vessels** | ASME Section VIII Div 1 Mechanical Engine | UG-27(c)(1) cylindrical shell thickness under internal pressure, UG-32(d) 2:1 ellipsoidal heads, UG-32(e) torispherical heads, UG-37 nozzle opening area replacement, UG-99 hydrostatic test pressure | ASME BPVC Section VIII Div 1, ASME Section II Part D |
+| Subsystem | Underlying Engine | Key Capabilities | Standards / Formats | Platform Support |
+| :--- | :--- | :--- | :--- | :--- |
+| **SolidWorks** | Dassault Systèmes SOLIDWORKS 2025 SP1.2 (`SldWorks.Application`) | Parametric 3D solid modeling, feature tree traversal, assembly constraints, mass properties, high-res viewport rendering, STEP/PDF export | `.SLDPRT`, `.SLDASM`, `.SLDDRW`, `.STEP`, B-Rep solid math | Windows (COM Automation) |
+| **Aspen Plus** | Aspen Technology Aspen Plus V14 (`Apwn.Document` OLE Services) | Rigorous flowsheet topology inspection, stream balance extraction, unit block duty schedules, live solver execution (`Run2`), offline converged audit | `.bkp`, `.apw`, `.inp`, ASME STEAM-TA, NRTL, ELECNRTL | Windows (COM) + Linux (Offline Audit) |
+| **Aspen HYSYS** | Aspen Technology Aspen HYSYS (`HYSYS.Application` COM) | Dynamic & steady-state hydrocarbon/chemical flowsheets, material/energy streams, unit operations, property packages | `.hsc`, Peng-Robinson, Sour PR, SRK, Glycol, Amines | Windows (COM) + Linux (Offline Case Parsing) |
+| **CHEMCAD** | Chemstations CHEMCAD v7/v8 (`CHEMCAD.Application` COM) | Chemical process flowsheet inspection, unit operations, streams, and batch distillation modeling | `.ccx`, `.cc5`, `.cc6`, NRTL, UNIQUAC, Peng-Robinson | Windows (COM) + Linux (Offline XML/CCX) |
+| **PRO/II** | AVEVA SimSci PRO/II (`PROII.Application` COM) | Refinery, gas processing, and petrochemical flowsheet simulation and archive inspection | `.prz`, `.pr2`, `.inp`, SRK, Peng-Robinson, Grayson-Streed | Windows (COM) + Linux (Offline PRZ Parsing) |
+| **Cantera** | Cantera Chemical Physics Suite (Open-Source) | Chemical reaction kinetics (Arrhenius law), multi-component gas transport properties (Sutherland viscosity, thermal conductivity), Gibbs equilibrium | Cantera YAML / XML / CTI, Kinetic Theory of Gases | **Native Cross-Platform (Linux, macOS, Windows)** |
+| **UniSim Design** | Honeywell UniSim Design (`UniSimDesign.Application` COM) | Refining, gas processing, and petrochemical flowsheet inspection and property packages | `.usc`, `.hsc`, Peng-Robinson, Kabadi-Danner | Windows (COM) + Linux (Offline Inspection) |
+| **DWSIM** | DWSIM Open-Source Simulator (v8/v9) | Open-source process simulation, CAPE-OPEN thermodynamics, XML flowsheet inspection, Rachford-Rice VLE flash | `.dwsim`, `.dwxml`, CoolProp, UNIFAC, IAPWS-IF97 | **Native Cross-Platform (Linux & Windows)** |
+| **AutoCAD** | Autodesk AutoCAD 2025 (`AutoCAD.Application` & `accoreconsole.exe`) | Automated P&ID and General Arrangement drafting, title block verification, layer auditing, headless DWG-to-PDF/DXF batch conversion | `.dwg`, `.dxf`, Vector PDF, ANSI/ISO title blocks | Windows (COM & accoreconsole) |
+| **Thermodynamics** | First-Principles Thermodynamics Engine | High-precision steam tables (ASME STEAM-TA / IAPWS-95 6-term), Peng-Robinson Cubic Equation of State (PR-EOS), analytical Cardano cubic root solver, fugacity coefficients, Wagner/Antoine vapor pressure | ASME 1967 Steam Tables, IAPWS Industrial Formulation, PR (1976) | **Native Cross-Platform (Pure Python / No COM Required)** |
+| **Process Hydraulics** | First-Principles Hydraulics Engine | Darcy-Weisbach head loss, Colebrook-White friction factor (Newton-Raphson), ASME B36.10M standard pipe schedules, Crane TP 410 minor losses, Pump TDH, NPSHa, motor sizing | ASME B36.10M, Crane TP 410, Hydraulic Institute (HI) | **Native Cross-Platform (Pure Python / No COM Required)** |
+| **Thermal Design** | Industrial Heat Transfer Engine | TEMA E shell-and-tube heat exchanger rating (Kern method), LMTD & $F_T$ configuration correction, MVR falling-film evaporator mass/energy balances, compressor power & specific energy | TEMA 10th Ed Class C/R, Kern Method, MVR Industrial Design | **Native Cross-Platform (Pure Python / No COM Required)** |
+| **Pressure Vessels** | ASME Section VIII Div 1 Mechanical Engine | UG-27(c)(1) cylindrical shell thickness under internal pressure, UG-32(d) 2:1 ellipsoidal heads, UG-32(e) torispherical heads, UG-37 nozzle opening area replacement, UG-99 hydrostatic test pressure | ASME BPVC Section VIII Div 1, ASME Section II Part D | **Native Cross-Platform (Pure Python / No COM Required)** |
 
 ---
 
-## 3. Industrial Resilience Architecture ("No Vibe Code")
+## 3. Industrial Resilience, Linux Compatibility & Low-Spec Performance
 
-Engineering automation in Windows environments frequently crashes when implemented with naive scripts ("vibe code") due to COM threading apartment violations, zombie processes locking files, and blocking modal dialogs. `agentic-chemeng` incorporates an industrial-grade resilience engine (`agentic_chemeng.resilience`):
+`agentic-chemeng` is engineered specifically to prevent crashes across **Linux, macOS, Windows**, and **resource-constrained legacy machines**:
 
-1. **Idempotent COM Apartment Safety:** All COM calls invoke `ensure_com_initialized()`, safely maintaining single-threaded apartments (STA) and preventing `CoInitialize has not been called` (0x800401F0) crashes.
-2. **Wall-Clock Timeout Guardians:** Heavy COM operations (e.g. CAD model opening, mesh generation, flowsheet solving) run inside `run_with_timeout()`, preventing hanging background processes when modal popups occur.
-3. **Zero Process Leaks & Zombie Reap Guards:** Proactively discovers and reaps orphaned `SLDWORKS.exe`, `accoreconsole.exe`, and headless simulation processes using `cleanup_stale_processes()`.
-4. **Defensive Path & File Validation:** Enforces whitelist verification, path canonicalization, and file size checks before passing paths to native COM wrappers.
-5. **Structured Error Envelopes:** Returns standardized JSON error envelopes with error categories, ISO 8601 UTC timestamps, and actionable remediation steps.
+1. **Full Linux / POSIX Compatibility:**
+   - In standard Python libraries, importing Windows COM (`pywin32`) on Linux causes fatal `ModuleNotFoundError` crashes. `agentic-chemeng` implements **dynamic platform detection (`IS_WINDOWS = sys.platform == 'win32'`)**:
+     * On Linux, macOS, and cloud Docker containers, COM imports are conditionally bypassed with zero runtime errors.
+     * All first-principles modules (Thermodynamics, Hydraulics, Thermal Design, ASME Pressure Vessels, DWSIM XML parsing, Cantera kinetics) run **100% natively on Linux**.
+     * Windows COM controllers (`SolidWorks`, `Aspen Plus`, `HYSYS`, `AutoCAD`, `CHEMCAD`, `PRO/II`) gracefully degrade on Linux to report structured JSON statuses with offline archive extraction capabilities.
+2. **Old & Low-Spec Machine Optimization:**
+   - **Non-Blocking Status Inquiries:** Querying application status (`agentic-chemeng status`) does *not* launch heavy 4 GB CAD/CAE applications into memory. It tests active ROT objects and OS registry signatures in `< 0.2s`, preventing RAM exhaustion on dual-core or 4 GB RAM laptops.
+   - **Wall-Clock Timeout Guardians:** All operations are wrapped in `run_with_timeout()`. If an older computer or slow mechanical HDD encounters an unresponsive application or modal popup, the execution thread is aborted safely after a configurable threshold (default: 20s) rather than freezing the system.
+   - **Strict Garbage Collection:** Explicit `gc.collect()` and COM pointer releases prevent memory leaks during batch calculations across thousands of streams or components.
+   - **Zero Process Leaks:** `cleanup_stale_processes()` terminates orphan background worker processes on both Windows (`taskkill`) and Linux (`pkill`).
 
 ---
 
@@ -202,7 +211,7 @@ pv-cli hydro --pressure 10.0 --temp 120.0 --material "SA-240 316L"
 
 ## 6. Model Context Protocol (MCP) Integration
 
-`agentic-chemeng` exposes **36 Model Context Protocol (MCP) tools** conforming to JSON-RPC 2.0 (MCP specification 2024-11-05).
+`agentic-chemeng` exposes **48 Model Context Protocol (MCP) tools** conforming to JSON-RPC 2.0 (MCP specification 2024-11-05) across 13 chemical and mechanical engineering domains.
 
 To add `agentic-chemeng` to Claude Desktop, Antigravity, or Cursor, configure your MCP client configuration (`claude_desktop_config.json`):
 
