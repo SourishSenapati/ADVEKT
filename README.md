@@ -1,56 +1,54 @@
+<div align="center">
+
 ```
-    ___     ____ _    __ ______ __ __ ______
-   /   |   / __ \ |  / // ____// //_//_  __/
-  / /| |  / / / / | / // __/  / ,<    / /   
- / ___ | / /_/ /| |/ // /___ / /| |  / /    
-/_/  |_|/_____/ |___//_____//_/ |_| /_/     
+      _    ____  _   _ _____ _  _______ 
+     / \  |  _ \| | | | ____| |/ /_   _|
+    / _ \ | | | | | | |  _| | ' /  | |  
+   / ___ \| |_| | \_/ | |___| . \  | |  
+  /_/   \_\____/ \___/|_____|_|\_\ |_|  
 ```
 
-# ADVEKT (`advekt`)
+# A D V E K T
 
-**Autonomous Multi-Discipline Chemical & Mechanical Engineering CAE Suite with Native RAEBYES Circuit Breaking**  
-*The Invariant Velocity Field of Continuous Matter*  
+### *The Invariant Velocity Field of Continuous Matter*
 
-[![Python 3.10+](https://img.shields.io/badge/python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-blue.svg?style=flat-square)](https://www.python.org/)
-[![MCP Server](https://img.shields.io/badge/MCP-60%20Tools%20(JSON--RPC%202.0)-8A2BE2.svg?style=flat-square)](https://modelcontextprotocol.io/)
-[![CLI Binaries](https://img.shields.io/badge/CLI-21%20Executables-00bcd4.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
-[![Tests Passing](https://img.shields.io/badge/tests-60%2F60%20passed%20(100%25)-brightgreen.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
-[![Circuit Breaker](https://img.shields.io/badge/RAEBYES-Invariant%20Protected-orange.svg?style=flat-square)](https://github.com/SourishSenapati/RAEBYES)
-[![License](https://img.shields.io/badge/license-Commercial%20%26%20IP%20Protection%20v1.0-red.svg?style=flat-square)](LICENSE)
-[![Monetization Protected](https://img.shields.io/badge/monetization-IP%20Reserved%20(Sourish%20Senapati)-blueviolet.svg?style=flat-square)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
+**Autonomous Multi-Discipline Chemical & Mechanical Engineering CAE Suite & MCP Engine**  
+*Direct Kernel COM Automation • Headless Linux First-Principles Solvers • Native RAEBYES Invariant Protection*
 
-*Project Ref:* `FNQ-PR-2026-001`  
-*Lead Chemical & Process Engineer:* **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*)  
-*License:* ADVEKT Source-Available Commercial & IP Protection License v1.0 (Non-Commercial/Academic Free; Commercial License Required)    
+[![Python](https://img.shields.io/badge/Python-3.10%20%7C%203.11%20%7C%203.12%20%7C%203.13-3776AB?style=for-the-badge&logo=python&logoColor=white)](https://www.python.org/)
+[![MCP](https://img.shields.io/badge/MCP-60%20Tools%20(JSON--RPC)-8A2BE2?style=for-the-badge&logo=anthropic&logoColor=white)](https://modelcontextprotocol.io/)
+[![CLI](https://img.shields.io/badge/CLI-21%20Binaries-00C7B7?style=for-the-badge&logo=gnubash&logoColor=white)](https://github.com/SourishSenapati/ADVEKT)
+[![Tests](https://img.shields.io/badge/Tests-60%2F60%20Passing-22c55e?style=for-the-badge&logo=pytest&logoColor=white)](https://github.com/SourishSenapati/ADVEKT)
+[![RAEBYES](https://img.shields.io/badge/RAEBYES-Invariant%20Guarded-F97316?style=for-the-badge)](https://github.com/SourishSenapati/RAEBYES)
+[![License](https://img.shields.io/badge/License-Commercial%20%26%20IP%20Protected-EF4444?style=for-the-badge)](LICENSE)
+
+*Project Ref:* `FNQ-PR-2026-001` • *Lead Chemical & Process Engineer:* **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*)  
+*License:* **ADVEKT Commercial & Intellectual Property Protection License v1.0** (Free for Personal & Academic Use / Commercial License Required)
 
 ---
 
-## 1. The Cryptic Philosophy & Physical Cipher
+</div>
 
-**ADVEKT** (/ædˈvɛkt/) is named after the fundamental **advection operator** of continuum mechanics and transport phenomena:
+## 1. The Core Manifesto: Ground-Truth Engineering Over Token Guessing
 
-$$\mathbf{u} \cdot \nabla c \quad \text{and} \quad \rho (\mathbf{u} \cdot \nabla) \mathbf{u}$$
+Large Language Models hallucinate numbers. In web applications or copy generation, a hallucinated token is an inconvenience. **In high-pressure chemical plants, steam boiler headers, and rotating machinery, an unverified number is a catastrophic structural explosion.**
 
-In physical fluid dynamics, **advection** is the immutable velocity field that transports continuous matter, momentum, and enthalpy across physical boundaries. It is the realization of Heraclitus's continuum flux (*Panta Rhei*) strictly constrained by the conservation laws (*The Logos*). Continuous matter cannot be forged; mass cannot be hallucinated.
+Superficial AI coding assistants ("vibe coders") substitute hard engineering reality with synthetic mock arrays, fabricated pressure drops, and fictitious yields.
 
-In autonomous artificial intelligence, **ADVEKT** is the deterministic velocity field that propels AI coding agents (Claude, Cursor, Antigravity, Gemini) through rigorous chemical and mechanical engineering tasks without permitting them to drift into superficial "vibe coding," synthetic mock arrays, or unverified hallucinations.
+**ADVEKT eliminates hallucination through three inviolable architectural tenets:**
 
-### The Anti-Hallucination Mandate
-Superficial AI coding assistants frequently fabricate plausible-sounding chemical yields, random pipe wall thicknesses, and synthetic temperature arrays. In industrial chemical plants, boiler islands, and high-pressure reactors, unverified numbers lead to catastrophic physical failure. 
-
-**ADVEKT eliminates hallucination through three inviolable architectural principles:**
-1. **Direct Software COM Automation:** On Windows, ADVEKT directly controls authentic, licensed CAD/CAE software (SolidWorks, Aspen Plus, Aspen HYSYS, AutoCAD, CHEMCAD, PRO/II) via official OLE/COM APIs.
-2. **Headless Linux Physics Solvers:** On Linux and cloud containers where COM is absent, ADVEKT dispatches exact, analytical, first-principles solvers (ASME Section VIII Div 1, Darcy-Weisbach Colebrook-White, ASME STEAM-TA steam tables, Peng-Robinson Cubic EOS, TEMA Kern shell-and-tube rating).
-3. **Hardwired Invariant Circuit Breaking:** Integrated natively with [`SourishSenapati/RAEBYES`](https://github.com/SourishSenapati/RAEBYES). If any AI-generated stream table violates conservation of mass ($\delta_{\text{mass}} \ge 10^{-4}$) or outputs flat synthetic arrays ($\operatorname{Var} < 10^{-6}$), the circuit breaker trips instantly, preventing corrupted data from entering downstream CAD models or fabrication drawings.
+1. **Direct Software COM Automation:** On Windows, ADVEKT bypasses text simulation entirely. It directly manipulates running instances of licensed CAD/CAE software (SolidWorks 2025, Aspen Plus V14, Aspen HYSYS, AutoCAD 2025, CHEMCAD, PRO/II) via official OLE/COM API dispatch tables.
+2. **Pure Linux First-Principles Solvers:** On cloud containers and Linux clusters where proprietary Windows software is absent, ADVEKT dispatches exact, analytical, first-principles solvers (ASME Section VIII Div 1 pressure vessels, Colebrook-White implicit hydraulics, ASME STEAM-TA steam tables, Peng-Robinson Cubic EOS with analytical Cardano roots, TEMA Kern heat exchangers).
+3. **Hardwired Invariant Circuit Breaking:** Integrated natively with [`SourishSenapati/RAEBYES`](https://github.com/SourishSenapati/RAEBYES). If an AI agent attempts to output a mass balance with closure error $\delta_{\text{mass}} \ge 10^{-4}$ or flat synthetic arrays ($\mathrm{Var}(\mathbf{X}) < 10^{-6}$), the circuit breaker trips instantly, aborting execution before corrupted parameters enter manufacturing drawings or capital expenditure schedules.
 
 ---
 
-## 2. System Architecture & Dual Interfaces
+## 2. System Architecture
 
 ```
                     ┌────────────────────────────────────────────────────────┐
                     │                      A D V E K T                       │
+                    │      The Invariant Velocity Field of Continuous Matter │
                     └───────────────────────────┬────────────────────────────┘
                                                 │
                  ┌──────────────────────────────┴──────────────────────────────┐
@@ -62,7 +60,7 @@ Superficial AI coding assistants frequently fabricate plausible-sounding chemica
    │  • advekt status (<0.2s)  │                                 │  • Claude Desktop         │
    │  • solidworks-cli         │                                 │  • Cursor / Antigravity   │
    │  • aspen-plus-cli / hysys │                                 │  • Gemini CLI / Copilot   │
-   │  • thermo-cli / pv-cli    │                                 │  • Stdio non-blocking     │
+   │  • thermo-cli / pv-cli    │                                 │  • Non-blocking Stdio     │
    │  • hydraulics / thermal   │                                 │  • Zero zombie processes  │
    └─────────────┬─────────────┘                                 └─────────────┬─────────────┘
                  │                                                             │
@@ -91,7 +89,57 @@ Superficial AI coding assistants frequently fabricate plausible-sounding chemica
 
 ---
 
-## 3. Subsystem Matrix & Supported Standards
+## 3. Quickstart (Under 60 Seconds)
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/SourishSenapati/ADVEKT.git
+cd ADVEKT
+
+# Install in editable mode
+pip install -e .
+
+# Or install with developer test dependencies
+pip install -e ".[dev]"
+```
+
+### Instant Diagnostic Status
+```bash
+# Non-blocking status check across all 17 engineering subsystems in < 0.2s
+advekt status
+```
+
+### Model Context Protocol (MCP) Setup
+Connect ADVEKT to your AI agent environment:
+
+* **Claude Desktop** (`claude_desktop_config.json`):
+  ```json
+  {
+    "mcpServers": {
+      "advekt": {
+        "command": "advekt-mcp",
+        "args": []
+      }
+    }
+  }
+  ```
+
+* **Cursor** (`.cursor/settings.json`):
+  ```json
+  {
+    "cursor.mcpServers": {
+      "advekt": {
+        "command": "python",
+        "args": ["-m", "agentic_chemeng.mcp.server"]
+      }
+    }
+  }
+  ```
+
+---
+
+## 4. Subsystem Matrix & Technical Standards
 
 | Subsystem | Underlying Engine | Key Capabilities | Standards / Formats | Platform Support |
 | :--- | :--- | :--- | :--- | :--- |
@@ -111,13 +159,15 @@ Superficial AI coding assistants frequently fabricate plausible-sounding chemica
 | **Process Hydraulics** | First-Principles Hydraulics Engine | Darcy-Weisbach head loss, Colebrook-White friction factor (Newton-Raphson), ASME B36.10M standard pipe schedules, Crane TP 410 minor losses, Pump TDH, NPSHa, motor sizing | ASME B36.10M, Crane TP 410, Hydraulic Institute (HI) | **Native Cross-Platform (Pure Python / No COM Required)** |
 | **Thermal Design** | Industrial Heat Transfer Engine | TEMA E shell-and-tube heat exchanger rating (Kern method), LMTD & $F_T$ configuration correction, MVR falling-film evaporator mass/energy balances, compressor power & specific energy | TEMA 10th Ed Class C/R, Kern Method, MVR Industrial Design | **Native Cross-Platform (Pure Python / No COM Required)** |
 | **Pressure Vessels** | ASME Section VIII Div 1 Mechanical Engine | UG-27(c)(1) cylindrical shell thickness under internal pressure, UG-32(d) 2:1 ellipsoidal heads, UG-32(e) torispherical heads, UG-37 nozzle opening area replacement, UG-99 hydrostatic test pressure | ASME BPVC Section VIII Div 1, ASME Section II Part D | **Native Cross-Platform (Pure Python / No COM Required)** |
-| **RAEBYES Protocol** | Invariant Circuit Breaker Daemon | Strict mass/energy conservation enforcement ($\delta < 10^{-4}$), array/tensor variance floor auditing ($\operatorname{Var} > 10^{-6}$), process crash recovery | Circuit breaker tripping, tamper-evident JSON audit trail | **Native Cross-Platform (Pure Python / No COM Required)** |
+| **RAEBYES Protocol** | Invariant Circuit Breaker Daemon | Strict mass/energy conservation enforcement ($\delta < 10^{-4}$), array/tensor variance floor auditing ($\mathrm{Var}(\mathbf{X}) \ge 10^{-6}$), process crash recovery | Circuit breaker tripping, tamper-evident JSON audit trail | **Native Cross-Platform (Pure Python / No COM Required)** |
 
 ---
 
-## 4. The 60 Registered Model Context Protocol (MCP) Tools
+## 5. The 60 Registered Model Context Protocol (MCP) Tools
 
-`advekt` exposes an exhaustive suite of **60 MCP tools** conforming strictly to the Model Context Protocol JSON-RPC 2.0 specification:
+<details open>
+<summary><b>⚡ Click to inspect complete 60-tool MCP Registry</b></summary>
+<br>
 
 ### Mechanical CAD & Automated Drafting (12 Tools)
 * **SolidWorks 2025** (9 tools):
@@ -200,13 +250,15 @@ Superficial AI coding assistants frequently fabricate plausible-sounding chemica
   56. `pv_asme_ug37_nozzle`: ASME Section VIII Div 1 UG-37 nozzle opening area replacement & reinforcement limits.
   57. `pv_asme_ug99_hydro`: ASME Section VIII Div 1 UG-99(b) hydrostatic proof test pressure.
 * **RAEBYES Invariant Circuit Breaker** (3 tools):
-  58. `raebyes_verify_simulation_variance`: Guard against synthetic flat arrays ($\operatorname{Var}(\mathbf{X}) \ge \sigma^2_{\text{min}}$).
+  58. `raebyes_verify_simulation_variance`: Guard against synthetic flat arrays ($\mathrm{Var}(\mathbf{X}) \ge \sigma^2_{\min}$).
   59. `raebyes_verify_conservation_invariants`: Enforce mass balance closure ($\delta_{\text{mass}} < 10^{-4}$).
   60. `raebyes_get_circuit_breaker_status`: Read circuit breaker state, trip history, and diagnostic logs.
 
+</details>
+
 ---
 
-## 5. Governing Equations & Mathematical Formulations
+## 6. Governing Equations & Mathematical Formulations
 
 ### 1. ASME Section VIII Division 1 Pressure Vessel Mechanics
 Under internal design pressure $P$, nominal design stress $S$, joint efficiency $E$, inside radius $R$, and corrosion allowance $t_c$:
@@ -223,13 +275,13 @@ Under internal design pressure $P$, nominal design stress $S$, joint efficiency 
 * **Nozzle Opening Reinforcement (UG-37):**
   $$A_{\text{req}} = d \cdot t_r \cdot F$$
   $$A_{\text{avail}} = A_1 (\text{excess shell}) + A_2 (\text{excess nozzle neck}) + A_4 (\text{weld fillets})$$
-  $$\text{Enforced Constraint: } A_{\text{avail}} \ge A_{\text{req}}$$
+  $$\text{Enforced Invariant Constraint: } A_{\text{avail}} \ge A_{\text{req}}$$
 
 * **Hydrostatic Proof Test Pressure (UG-99(b)):**
   $$P_{\text{test}} = 1.3 \cdot P_{\text{design}} \cdot \left(\frac{S_{\text{test}}}{S_{\text{design}}}\right)$$
 
 ### 2. Fluid Dynamics & Process Hydraulics
-* **Darcy-Weisbach Formulation:**
+* **Darcy-Weisbach Head Loss:**
   $$\Delta h_f = f \frac{L}{D} \frac{v^2}{2g}, \quad \Delta P_f = \rho g \Delta h_f$$
 
 * **Implicit Colebrook-White Friction Factor:**
@@ -262,29 +314,15 @@ Under internal design pressure $P$, nominal design stress $S$, joint efficiency 
   $$\delta_{\text{mass}} = \frac{\left|\sum \dot{m}_{\text{in}} - \sum \dot{m}_{\text{out}}\right|}{\sum \dot{m}_{\text{in}}} < \epsilon_{\text{tol}} \quad (\epsilon_{\text{tol}} = 10^{-4})$$
 
 * **Synthetic Variance Floor Check (Flat Array Detection):**
-  $$\operatorname{Var}(\mathbf{X}) = \frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^2 \ge \sigma^2_{\text{min}} \quad (\sigma^2_{\text{min}} = 10^{-6})$$
-
----
-
-## 6. Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/SourishSenapati/ADVEKT.git
-cd ADVEKT
-
-# Install in editable mode
-pip install -e .
-
-# Or install with developer test dependencies
-pip install -e ".[dev]"
-```
+  $$\mathrm{Var}(\mathbf{X}) = \frac{1}{N} \sum_{i=1}^N (x_i - \bar{x})^2 \ge \sigma^2_{\min} \quad (\sigma^2_{\min} = 10^{-6})$$
 
 ---
 
 ## 7. Command-Line Interface (CLI) Guide
 
-ADVEKT provides **21 dedicated high-performance CLI executables** designed for headless scripts, CI/CD pipelines, and fast engineering terminals:
+<details open>
+<summary><b>💻 Click to inspect the 21 Dedicated CLI Executables</b></summary>
+<br>
 
 ### 1. Master Subsystem Gateway (`advekt`)
 ```bash
@@ -391,19 +429,21 @@ aspen-plus-cli inspect
 aspen-plus-cli streams
 ```
 
+</details>
+
 ---
 
-## 8. Python SDK Usage
+## 8. Python SDK Direct API
 
-In addition to CLI and MCP, `advekt` can be imported directly into Python applications:
+In addition to CLI and MCP, `advekt` provides direct first-class Python bindings:
 
 ```python
 import advekt
 
-# 1. High-Precision ASME Steam Tables
+# 1. High-Precision ASME Steam Tables (IAPWS Formulation)
 steam = advekt.thermo.calculate_steam_properties(temperature_C=160.0, pressure_bar=6.18)
-print(f"Saturation Enthalpy (h_fg): {steam['latent_heat_hfg_kJ_kg']} kJ/kg")
-print(f"Liquid Density: {steam['liquid_density_kg_m3']} kg/m³")
+print(f"Latent Heat (h_fg): {steam['latent_heat_hfg_kJ_kg']} kJ/kg")
+print(f"Liquid Density:     {steam['liquid_density_kg_m3']} kg/m³")
 
 # 2. Process Hydraulics (Darcy-Weisbach & Colebrook-White)
 hyd = advekt.hydraulics.calculate_pressure_drop(
@@ -412,8 +452,8 @@ hyd = advekt.hydraulics.calculate_pressure_drop(
     length_m=120.0,
     roughness_mm=0.045
 )
-print(f"Friction Factor (f): {hyd['darcy_friction_factor']:.5f}")
-print(f"Total Pressure Drop: {hyd['pressure_drop_bar']:.3f} bar")
+print(f"Darcy Friction Factor: {hyd['darcy_friction_factor']:.5f}")
+print(f"Pressure Drop:         {hyd['pressure_drop_bar']:.3f} bar")
 
 # 3. ASME Section VIII Div 1 Cylindrical Shell
 shell = advekt.pressure_vessel.calculate_ug27_shell(
@@ -424,73 +464,37 @@ shell = advekt.pressure_vessel.calculate_ug27_shell(
     joint_efficiency=1.0,
     corrosion_allowance_mm=1.5
 )
-print(f"Required Shell Thickness: {shell['required_thickness_mm']:.2f} mm")
-print(f"Calculated MAWP: {shell['mawp_bar']:.2f} bar")
+print(f"Required Thickness:    {shell['required_thickness_mm']:.2f} mm")
+print(f"Calculated MAWP:       {shell['mawp_bar']:.2f} bar")
 
-# 4. RAEBYES Invariant Check
+# 4. RAEBYES Physical Invariant Protection
 guard = advekt.raebyes.verify_conservation_invariants(
     total_inflow_kg_h=1500.0,
     total_outflow_kg_h=1500.02,
     tolerance=1e-4
 )
-assert guard["passed"] is True, "Circuit breaker tripped on mass balance closure error!"
+assert guard["passed"] is True, "Circuit breaker tripped: mass balance closure violated!"
 ```
 
 ---
 
-## 9. Model Context Protocol (MCP) Configuration
+## 9. Low-Spec Optimization & Linux Resilience
 
-Configure your AI coding assistant to use `advekt-mcp`:
+`advekt` is engineered from first principles to prevent crashes across **Linux, macOS, Windows**, and **legacy machines with low RAM**:
 
-### Claude Desktop (`claude_desktop_config.json`)
-```json
-{
-  "mcpServers": {
-    "advekt": {
-      "command": "advekt-mcp",
-      "args": []
-    }
-  }
-}
-```
-
-### Cursor (`.cursor/settings.json`)
-```json
-{
-  "cursor.mcpServers": {
-    "advekt": {
-      "command": "python",
-      "args": ["-m", "agentic_chemeng.mcp.server"]
-    }
-  }
-}
-```
+* **Full Linux / POSIX Isolation:** Dynamic platform detection (`sys.platform == 'win32'`) ensures Windows COM (`pywin32`) calls are bypassed cleanly on Linux and cloud containers without import errors. First-principles thermodynamics, hydraulics, thermal design, pressure vessels, and Cantera run **100% natively on Linux**.
+* **Sub-200ms Non-Blocking Status:** Querying system health (`advekt status`) tests active Running Object Table (ROT) registrations and OS registry keys in $< 0.2$ s without launching heavy 4 GB CAD/CAE applications into RAM.
+* **Wall-Clock Timeout Guardians:** Every external solver process is wrapped in `run_with_timeout()`. If a slow hard drive or modal popup stalls execution, the process is safely aborted after a threshold (default: 20s).
+* **Deterministic Garbage Collection:** Explicit `gc.collect()` and COM pointer releases prevent memory accumulation. `cleanup_stale_processes()` kills orphan background workers on both Windows (`taskkill`) and Linux (`pkill`).
 
 ---
 
-## 10. Low-Spec Optimization & Linux Resilience
-
-`advekt` is engineered to operate reliably across **Linux, macOS, Windows**, and **legacy low-spec machines**:
-
-1. **Full Linux / POSIX Compatibility:**
-   - Detects `sys.platform == 'win32'` dynamically. Windows COM (`pywin32`) imports are conditionally bypassed on Linux without crashes.
-   - All first-principles modules (Thermodynamics, Hydraulics, Thermal Design, ASME Pressure Vessels, DWSIM XML parsing, Cantera kinetics) run **100% natively on Linux**.
-2. **Sub-200ms Non-Blocking Status Inquiries:**
-   - Querying system status (`advekt status`) tests active Running Object Table (ROT) registrations and OS registry keys in `< 0.2s` without launching heavy CAD/CAE applications into RAM.
-3. **Wall-Clock Timeout Guardians:**
-   - All external processes are wrapped in `run_with_timeout()`. If a slow HDD or hung application freezes, execution terminates cleanly after a configurable threshold (default: 20s).
-4. **Memory Management & Zero Process Leaks:**
-   - Explicit `gc.collect()` and COM pointer releases prevent memory accumulation.
-   - `cleanup_stale_processes()` kills orphan background workers on both Windows (`taskkill`) and Linux (`pkill`).
-
----
-
-## 11. Intellectual Property Ownership, Commercial Licensing & Monetization Covenant
+## 10. Intellectual Property Ownership, Commercial Licensing & Monetization
 
 `ADVEKT` is released under the **ADVEKT Source-Available Commercial & Intellectual Property Protection License v1.0** ([`LICENSE`](LICENSE)).
 
 ### 1. 100% Retained Intellectual Property
-All intellectual property, copyrights, patent rights, trade dress, trademarks, and trade secrets in `ADVEKT` (`advekt`), its 60 MCP tools, 21 CLI executables, and mathematical solvers are exclusively and solely owned by **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*). No title or transfer of IP is granted.
+All intellectual property, copyrights, patent rights, trade dress, trademarks, and trade secrets in `ADVEKT` (`advekt`), its 60 MCP tools, 21 CLI executables, and mathematical solvers are exclusively and solely owned by **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*). No transfer of IP is granted.
 
 ### 2. Free for Personal, Non-Commercial & Academic Research
 You are free to inspect, download, test, benchmark, and evaluate `ADVEKT` for individual personal projects, non-profit academic research, and classroom education without charge.
@@ -501,14 +505,14 @@ You are free to inspect, download, test, benchmark, and evaluate `ADVEKT` for in
 
 ### 4. Commercial & Enterprise Licensing Inquiries
 For commercial licensing, enterprise multi-seat deployment, OEM bundling, proprietary process bindings, or revenue-sharing agreements, contact:
-* **Lead Engineer & IP Owner:** Sourish Senapati
+* **Lead Chemical & Process Engineer / IP Owner:** Sourish Senapati
 * **Email:** `sourishsenapati791@gmail.com` / `engineering@finnoaq.com`
 * **Entity:** FinnoaQ Agro-Industrial Technologies Ltd.
 * **Project Reference:** `FNQ-PR-2026-001`
 
 ---
 
-## 12. Technical Standards Attribution
+## 11. Technical Standards Attribution
 
 - **Lead Chemical & Process Engineer:** Sourish Senapati (*FinnoaQ Agro-Industrial Technologies Ltd.*)
 - **Governing Project Reference:** `FNQ-PR-2026-001`
