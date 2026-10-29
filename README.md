@@ -26,6 +26,9 @@ Unlike superficial "vibe coding" approximations, `agentic-chemeng` enforces stri
 | **PRO/II** | AVEVA SimSci PRO/II (`PROII.Application` COM) | Refinery, gas processing, and petrochemical flowsheet simulation and archive inspection | `.prz`, `.pr2`, `.inp`, SRK, Peng-Robinson, Grayson-Streed | Windows (COM) + Linux (Offline PRZ Parsing) |
 | **Cantera** | Cantera Chemical Physics Suite (Open-Source) | Chemical reaction kinetics (Arrhenius law), multi-component gas transport properties (Sutherland viscosity, thermal conductivity), Gibbs equilibrium | Cantera YAML / XML / CTI, Kinetic Theory of Gases | **Native Cross-Platform (Linux, macOS, Windows)** |
 | **UniSim Design** | Honeywell UniSim Design (`UniSimDesign.Application` COM) | Refining, gas processing, and petrochemical flowsheet inspection and property packages | `.usc`, `.hsc`, Peng-Robinson, Kabadi-Danner | Windows (COM) + Linux (Offline Inspection) |
+| **Siemens gPROMS** | Siemens / PSE gPROMS ProcessBuilder & ModelBuilder | Advanced equation-oriented process modeling, distributed systems (PDEs/DAEs), dynamic simulation, parameter estimation | `.gPJ`, `.gPA`, `.xml`, Custom DAEs, Catalytic / Polymer Systems | Windows (COM/CLI) + Linux (Offline Parsing) |
+| **COMSOL Multiphysics** | COMSOL Multiphysics Multiphysics Suite | Chemical reaction engineering (`cheq`), transport of diluted/concentrated species (`tds`/`tcs`), heat transfer in fluids (`ht`), laminar flow (`spf`) | `.mph`, Finite Element Analysis, Multiphysics Coupling | **Native Headless Inspection (Linux, macOS, Windows)** + Batch CLI |
+| **Ansys Fluent & CFX** | Ansys Fluent & CFX Fluid Dynamics | Reacting flow CFD, finite-rate combustion kinetics, multi-component species transport, multiphase Eulerian/VOF/DPM | `.cas`, `.cas.gz`, `.cas.h5`, `.def`, `.cfx`, `.jou` | **Native Headless Inspection (Linux & Windows)** + Batch Journal Solver |
 | **DWSIM** | DWSIM Open-Source Simulator (v8/v9) | Open-source process simulation, CAPE-OPEN thermodynamics, XML flowsheet inspection, Rachford-Rice VLE flash | `.dwsim`, `.dwxml`, CoolProp, UNIFAC, IAPWS-IF97 | **Native Cross-Platform (Linux & Windows)** |
 | **AutoCAD** | Autodesk AutoCAD 2025 (`AutoCAD.Application` & `accoreconsole.exe`) | Automated P&ID and General Arrangement drafting, title block verification, layer auditing, headless DWG-to-PDF/DXF batch conversion | `.dwg`, `.dxf`, Vector PDF, ANSI/ISO title blocks | Windows (COM & accoreconsole) |
 | **Thermodynamics** | First-Principles Thermodynamics Engine | High-precision steam tables (ASME STEAM-TA / IAPWS-95 6-term), Peng-Robinson Cubic Equation of State (PR-EOS), analytical Cardano cubic root solver, fugacity coefficients, Wagner/Antoine vapor pressure | ASME 1967 Steam Tables, IAPWS Industrial Formulation, PR (1976) | **Native Cross-Platform (Pure Python / No COM Required)** |
@@ -156,7 +159,52 @@ autocad-cli inspect "path/to/pfd.dwg"
 autocad-cli export-pdf "path/to/pid.dwg" --out "path/to/pid.pdf"
 ```
 
-#### 6. Thermodynamics (`thermo-cli`)
+#### 5. Honeywell UniSim Design (`unisim-cli`)
+```bash
+# Check UniSim COM connection status
+unisim-cli status
+
+# Inspect UniSim simulation case (.usc, .hsc)
+unisim-cli inspect "path/to/case.usc"
+```
+
+#### 6. Siemens gPROMS (`gproms-cli`)
+```bash
+# Check Siemens gPROMS environment & CLI
+gproms-cli status
+
+# Inspect gPROMS project file (.gPJ, .gPA, .xml)
+gproms-cli inspect "path/to/project.gPJ"
+
+# Run batch DAE/PDE simulation
+gproms-cli run "path/to/project.gPJ" --process ContinuousReaction --timeout 60
+```
+
+#### 7. COMSOL Multiphysics (`comsol-cli`)
+```bash
+# Check COMSOL Multiphysics installation & batch solver
+comsol-cli status
+
+# Inspect COMSOL model archive (.mph) for physics, geometries, studies, and parameters
+comsol-cli inspect "path/to/model.mph"
+
+# Dispatch headless batch study solve
+comsol-cli run "path/to/model.mph" --study std1 --output "path/to/solved.mph"
+```
+
+#### 8. Ansys Fluent & CFX (`ansys-cli`)
+```bash
+# Check Ansys Fluent / CFX environment variables (AWP_ROOT) & solver
+ansys-cli status
+
+# Inspect Fluent/CFX case (.cas, .cas.gz, .msh) for dimensions, mesh, and reacting flow models
+ansys-cli inspect "path/to/reactor.cas.gz"
+
+# Run headless CFD calculation via journal
+ansys-cli run "path/to/script.jou" --dimensions 3ddp --timeout 180
+```
+
+#### 9. Thermodynamics (`thermo-cli`)
 ```bash
 # Calculate ASME STEAM-TA steam properties at 160°C
 thermo-cli steam --temp 160.0
@@ -211,7 +259,23 @@ pv-cli hydro --pressure 10.0 --temp 120.0 --material "SA-240 316L"
 
 ## 6. Model Context Protocol (MCP) Integration
 
-`agentic-chemeng` exposes **48 Model Context Protocol (MCP) tools** conforming to JSON-RPC 2.0 (MCP specification 2024-11-05) across 13 chemical and mechanical engineering domains.
+`agentic-chemeng` exposes **57 Model Context Protocol (MCP) tools** conforming to JSON-RPC 2.0 (MCP specification 2024-11-05) across 16 chemical, mechanical, CAD, and CAE engineering domains:
+- **SolidWorks 2025** (9 tools)
+- **Aspen Plus V14** (6 tools)
+- **Aspen HYSYS** (4 tools)
+- **Siemens gPROMS** (3 tools)
+- **COMSOL Multiphysics** (3 tools)
+- **Ansys Fluent & CFX** (3 tools)
+- **Chemstations CHEMCAD** (3 tools)
+- **AVEVA SimSci PRO/II** (3 tools)
+- **Cantera Chemical Kinetics** (3 tools)
+- **Honeywell UniSim Design** (2 tools)
+- **DWSIM 8/9** (3 tools)
+- **Autodesk AutoCAD 2025** (3 tools)
+- **ASME/PR Thermodynamics** (2 tools)
+- **Process Hydraulics** (3 tools)
+- **Industrial Thermal Design** (3 tools)
+- **ASME Pressure Vessels** (4 tools)
 
 To add `agentic-chemeng` to Claude Desktop, Antigravity, or Cursor, configure your MCP client configuration (`claude_desktop_config.json`):
 

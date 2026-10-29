@@ -39,6 +39,12 @@ from ..cantera.controller import CanteraController
 from ..cantera.tools import CANTERA_TOOLS
 from ..unisim.controller import UniSimController
 from ..unisim.tools import UNISIM_TOOLS
+from ..gproms.controller import GpromsController
+from ..gproms.tools import GPROMS_TOOLS
+from ..comsol.controller import ComsolController
+from ..comsol.tools import COMSOL_TOOLS
+from ..ansys.controller import AnsysController
+from ..ansys.tools import ANSYS_TOOLS
 
 from ..thermo.equations import calculate_steam_properties, peng_robinson_eos
 from ..thermo.tools import THERMO_TOOLS
@@ -73,6 +79,9 @@ chemcad_controller = ChemcadController()
 proii_controller = ProIIController()
 cantera_controller = CanteraController()
 unisim_controller = UniSimController()
+gproms_controller = GpromsController()
+comsol_controller = ComsolController()
+ansys_controller = AnsysController()
 
 ALL_TOOLS = (
     SOLIDWORKS_TOOLS +
@@ -84,6 +93,9 @@ ALL_TOOLS = (
     PROII_TOOLS +
     CANTERA_TOOLS +
     UNISIM_TOOLS +
+    GPROMS_TOOLS +
+    COMSOL_TOOLS +
+    ANSYS_TOOLS +
     THERMO_TOOLS +
     HYDRAULICS_TOOLS +
     THERMAL_TOOLS +
@@ -181,6 +193,49 @@ def dispatch_unisim_tool(controller, tool_name, args):
     elif tool_name == "unisim_inspect_case":
         return controller.inspect_case(args["filepath"])
     raise ValueError(f"Unknown UniSim tool: {tool_name}")
+
+
+def dispatch_gproms_tool(controller, tool_name, args):
+    if tool_name == "gproms_get_status":
+        return controller.get_status()
+    elif tool_name == "gproms_inspect_project":
+        return controller.inspect_project(args["filepath"])
+    elif tool_name == "gproms_run_simulation":
+        return controller.run_simulation(
+            args["filepath"],
+            process_name=args.get("process_name"),
+            timeout_sec=args.get("timeout_sec", 60.0)
+        )
+    raise ValueError(f"Unknown gPROMS tool: {tool_name}")
+
+
+def dispatch_comsol_tool(controller, tool_name, args):
+    if tool_name == "comsol_get_status":
+        return controller.get_status()
+    elif tool_name == "comsol_inspect_model":
+        return controller.inspect_model(args["filepath"])
+    elif tool_name == "comsol_run_study":
+        return controller.run_study(
+            args["filepath"],
+            study_tag=args.get("study_tag"),
+            output_path=args.get("output_path"),
+            timeout_sec=args.get("timeout_sec", 120.0)
+        )
+    raise ValueError(f"Unknown COMSOL tool: {tool_name}")
+
+
+def dispatch_ansys_tool(controller, tool_name, args):
+    if tool_name == "ansys_get_status":
+        return controller.get_status()
+    elif tool_name == "ansys_inspect_case":
+        return controller.inspect_case(args["filepath"])
+    elif tool_name == "ansys_run_journal":
+        return controller.run_journal(
+            args["journal_path"],
+            dimensions=args.get("dimensions", "3ddp"),
+            timeout_sec=args.get("timeout_sec", 180.0)
+        )
+    raise ValueError(f"Unknown Ansys tool: {tool_name}")
 
 
 def dispatch_thermo_tool(tool_name, args):
@@ -327,6 +382,12 @@ def handle_tool_call(tool_name, arguments):
         return dispatch_cantera_tool(cantera_controller, tool_name, arguments or {})
     elif tool_name.startswith("unisim_"):
         return dispatch_unisim_tool(unisim_controller, tool_name, arguments or {})
+    elif tool_name.startswith("gproms_"):
+        return dispatch_gproms_tool(gproms_controller, tool_name, arguments or {})
+    elif tool_name.startswith("comsol_"):
+        return dispatch_comsol_tool(comsol_controller, tool_name, arguments or {})
+    elif tool_name.startswith("ansys_"):
+        return dispatch_ansys_tool(ansys_controller, tool_name, arguments or {})
     elif tool_name.startswith("autocad_"):
         return dispatch_autocad_tool(autocad_controller, tool_name, arguments or {})
     elif tool_name.startswith("thermo_"):

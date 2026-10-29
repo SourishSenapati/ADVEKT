@@ -28,6 +28,9 @@ from .chemcad.controller import ChemcadController
 from .proii.controller import ProIIController
 from .cantera.controller import CanteraController
 from .unisim.controller import UniSimController
+from .gproms.controller import GpromsController
+from .comsol.controller import ComsolController
+from .ansys.controller import AnsysController
 from .mcp.server import ALL_TOOLS, main as mcp_main
 
 
@@ -42,6 +45,9 @@ def get_system_status():
     pr = ProIIController().get_status()
     ct = CanteraController().get_status()
     us = UniSimController().get_status()
+    gp = GpromsController().get_status()
+    cs = ComsolController().get_status()
+    ans = AnsysController().get_status()
 
     return {
         "suite": "Agentic ChemEng Multi-Discipline Engineering Architecture",
@@ -58,6 +64,9 @@ def get_system_status():
             "proii_simulation": pr,
             "cantera_kinetics_transport": ct,
             "unisim_simulation": us,
+            "gproms_advanced_modeling": gp,
+            "comsol_multiphysics": cs,
+            "ansys_fluent_cfd": ans,
             "autocad_drafting": ac,
             "thermo_engine": {"status": "operational", "standards": ["ASME STEAM-TA", "Peng-Robinson EOS"]},
             "hydraulics_engine": {"status": "operational", "standards": ["Darcy-Weisbach", "ASME B36.10M", "Crane TP 410"]},
@@ -92,6 +101,9 @@ def main():
     subparsers.add_parser("proii", help="AVEVA SimSci PRO/II refinery & chemical simulation")
     subparsers.add_parser("cantera", help="Cantera chemical kinetics, thermodynamics & transport")
     subparsers.add_parser("unisim", help="Honeywell UniSim Design process simulation")
+    subparsers.add_parser("gproms", help="Siemens gPROMS equation-oriented process modeling")
+    subparsers.add_parser("comsol", help="COMSOL Multiphysics chemical reaction & transport simulation")
+    subparsers.add_parser("ansys", help="Ansys Fluent & CFX reacting flow CFD simulation")
     subparsers.add_parser("autocad", help="Autodesk AutoCAD 2025 drafting & vector tools")
     subparsers.add_parser("thermo", help="Rigorous thermodynamics (ASME Steam & Peng-Robinson)")
     subparsers.add_parser("hydraulics", help="Process hydraulics (Darcy-Weisbach, Pump TDH, NPSHa)")
@@ -136,6 +148,15 @@ def main():
     elif args.subsystem == "unisim":
         from .unisim.cli import main as us_cli
         us_cli()
+    elif args.subsystem == "gproms":
+        from .gproms.cli import main as gp_cli
+        gp_cli()
+    elif args.subsystem == "comsol":
+        from .comsol.cli import main as cs_cli
+        cs_cli()
+    elif args.subsystem == "ansys":
+        from .ansys.cli import main as ans_cli
+        ans_cli()
     elif args.subsystem == "autocad":
         from .autocad.cli import main as ac_cli
         ac_cli()

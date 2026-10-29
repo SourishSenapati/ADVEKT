@@ -183,31 +183,42 @@ def cleanup_stale_processes(process_names=("SLDWORKS.exe", "accoreconsole.exe"),
     return killed
 
 
-def build_response(success=True, data=None, error=None, metadata=None, status=None):
+def build_response(success=True, data=None, error=None, metadata=None, status=None, **kwargs):
     """
     Constructs a standardized, bulletproof engineering JSON response envelope.
+    Supports extra kwargs to populate response fields directly.
     """
     if status is not None:
-        is_success = (status.lower() == "success")
+        status_val = status
+        is_success = str(status).lower() in ["success", "ready", "validated", "connected", "true"]
     else:
         is_success = bool(success)
+        status_val = "success" if is_success else "error"
 
     now_iso = datetime.datetime.now(datetime.timezone.utc).isoformat()
     payload = {
-        "status": "success" if is_success else "error",
+        "status": status_val,
         "timestamp": now_iso,
         "timestamp_utc": now_iso,
         "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
         "project_ref": "FNQ-PR-2026-001"
     }
+
     if is_success:
         payload["data"] = data or {}
+        if kwargs:
+            payload.update(kwargs)
     else:
         payload["error"] = {
             "type": type(error).__name__ if isinstance(error, Exception) else "EngineeringError",
-            "message": str(error) if error else "Unknown error occurred",
+            "message": str(error) if error else kwargs.get("message", "Operation blocked or unsupported deliverable"),
             "suggestion": getattr(error, "suggestion", "Verify software licensing, input file validity, and COM registration.")
         }
+        if kwargs:
+            for k, v in kwargs.items():
+                if k not in payload:
+                    payload[k] = v
+
     if metadata:
         payload["metadata"] = metadata
     return payload
