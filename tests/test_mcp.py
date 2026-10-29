@@ -8,13 +8,17 @@ from agentic_chemeng.mcp.server import ALL_TOOLS, process_message, handle_tool_c
 
 
 def test_mcp_all_tools_count():
-    assert len(ALL_TOOLS) == 37
+    assert len(ALL_TOOLS) == 48
     tool_names = [t["name"] for t in ALL_TOOLS]
     # Check key representative tools from each subsystem
     assert "solidworks_get_status" in tool_names
     assert "aspen_plus_get_status" in tool_names
     assert "aspen_hysys_get_status" in tool_names
     assert "dwsim_get_status" in tool_names
+    assert "chemcad_get_status" in tool_names
+    assert "proii_get_status" in tool_names
+    assert "cantera_get_status" in tool_names
+    assert "unisim_get_status" in tool_names
     assert "autocad_get_status" in tool_names
     assert "thermo_steam_properties" in tool_names
     assert "hydraulics_pressure_drop" in tool_names
@@ -35,7 +39,7 @@ def test_mcp_tools_list():
     resp = json.loads(process_message(req))
     assert resp["id"] == 2
     assert "tools" in resp["result"]
-    assert len(resp["result"]["tools"]) == 37
+    assert len(resp["result"]["tools"]) == 48
 
 
 def test_mcp_tool_call_thermo():

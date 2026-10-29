@@ -31,6 +31,15 @@ from ..dwsim.tools import DWSIM_TOOLS
 from ..autocad.controller import AutoCADController
 from ..autocad.tools import AUTOCAD_TOOLS, dispatch_autocad_tool
 
+from ..chemcad.controller import ChemcadController
+from ..chemcad.tools import CHEMCAD_TOOLS
+from ..proii.controller import ProIIController
+from ..proii.tools import PROII_TOOLS
+from ..cantera.controller import CanteraController
+from ..cantera.tools import CANTERA_TOOLS
+from ..unisim.controller import UniSimController
+from ..unisim.tools import UNISIM_TOOLS
+
 from ..thermo.equations import calculate_steam_properties, peng_robinson_eos
 from ..thermo.tools import THERMO_TOOLS
 from ..hydraulics.equations import get_pipe_dimensions, calculate_pressure_drop, calculate_pump_tdh_and_npsha
@@ -60,6 +69,10 @@ aspen_plus_controller = AspenPlusController()
 aspen_hysys_controller = AspenHysysController()
 dwsim_controller = DwsimController()
 autocad_controller = AutoCADController()
+chemcad_controller = ChemcadController()
+proii_controller = ProIIController()
+cantera_controller = CanteraController()
+unisim_controller = UniSimController()
 
 ALL_TOOLS = (
     SOLIDWORKS_TOOLS +
@@ -67,6 +80,10 @@ ALL_TOOLS = (
     ASPEN_HYSYS_TOOLS +
     DWSIM_TOOLS +
     AUTOCAD_TOOLS +
+    CHEMCAD_TOOLS +
+    PROII_TOOLS +
+    CANTERA_TOOLS +
+    UNISIM_TOOLS +
     THERMO_TOOLS +
     HYDRAULICS_TOOLS +
     THERMAL_TOOLS +
@@ -115,6 +132,55 @@ def dispatch_dwsim_tool(controller, tool_name, args):
             mole_fractions=args["mole_fractions"]
         )
     raise ValueError(f"Unknown DWSIM tool: {tool_name}")
+
+
+def dispatch_chemcad_tool(controller, tool_name, args):
+    if tool_name == "chemcad_get_status":
+        return controller.get_status()
+    elif tool_name == "chemcad_inspect_flowsheet":
+        return controller.inspect_flowsheet(args["filepath"])
+    elif tool_name == "chemcad_run_simulation":
+        return controller.run_simulation()
+    raise ValueError(f"Unknown CHEMCAD tool: {tool_name}")
+
+
+def dispatch_proii_tool(controller, tool_name, args):
+    if tool_name == "proii_get_status":
+        return controller.get_status()
+    elif tool_name == "proii_inspect_flowsheet":
+        return controller.inspect_flowsheet(args["filepath"])
+    elif tool_name == "proii_run_simulation":
+        return controller.run_simulation()
+    raise ValueError(f"Unknown PRO/II tool: {tool_name}")
+
+
+def dispatch_cantera_tool(controller, tool_name, args):
+    if tool_name == "cantera_get_status":
+        return controller.get_status()
+    elif tool_name == "cantera_arrhenius_kinetics":
+        return controller.calculate_arrhenius_kinetics(
+            A_pre_exponential=args["A_pre_exponential"],
+            Ea_kJ_mol=args["Ea_kJ_mol"],
+            temperature_C=args["temperature_C"],
+            order=args.get("order", 1.0),
+            initial_conc_mol_m3=args.get("initial_conc_mol_m3", 100.0),
+            time_seconds=args.get("time_seconds", 60.0)
+        )
+    elif tool_name == "cantera_gas_transport_properties":
+        return controller.calculate_gas_transport_properties(
+            gas_species=args.get("gas_species", "air"),
+            temperature_C=args.get("temperature_C", 25.0),
+            pressure_bar=args.get("pressure_bar", 1.01325)
+        )
+    raise ValueError(f"Unknown Cantera tool: {tool_name}")
+
+
+def dispatch_unisim_tool(controller, tool_name, args):
+    if tool_name == "unisim_get_status":
+        return controller.get_status()
+    elif tool_name == "unisim_inspect_case":
+        return controller.inspect_case(args["filepath"])
+    raise ValueError(f"Unknown UniSim tool: {tool_name}")
 
 
 def dispatch_thermo_tool(tool_name, args):
@@ -253,6 +319,14 @@ def handle_tool_call(tool_name, arguments):
         return dispatch_aspen_hysys_tool(aspen_hysys_controller, tool_name, arguments or {})
     elif tool_name.startswith("dwsim_"):
         return dispatch_dwsim_tool(dwsim_controller, tool_name, arguments or {})
+    elif tool_name.startswith("chemcad_"):
+        return dispatch_chemcad_tool(chemcad_controller, tool_name, arguments or {})
+    elif tool_name.startswith("proii_"):
+        return dispatch_proii_tool(proii_controller, tool_name, arguments or {})
+    elif tool_name.startswith("cantera_"):
+        return dispatch_cantera_tool(cantera_controller, tool_name, arguments or {})
+    elif tool_name.startswith("unisim_"):
+        return dispatch_unisim_tool(unisim_controller, tool_name, arguments or {})
     elif tool_name.startswith("autocad_"):
         return dispatch_autocad_tool(autocad_controller, tool_name, arguments or {})
     elif tool_name.startswith("thermo_"):

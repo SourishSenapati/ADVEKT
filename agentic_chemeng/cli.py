@@ -24,6 +24,10 @@ from .aspen_plus.controller import AspenPlusController
 from .aspen_hysys.controller import AspenHysysController
 from .dwsim.controller import DwsimController
 from .autocad.controller import AutoCADController
+from .chemcad.controller import ChemcadController
+from .proii.controller import ProIIController
+from .cantera.controller import CanteraController
+from .unisim.controller import UniSimController
 from .mcp.server import ALL_TOOLS, main as mcp_main
 
 
@@ -34,6 +38,10 @@ def get_system_status():
     ah = AspenHysysController().get_status()
     dw = DwsimController().get_status()
     ac = AutoCADController(visible=False).get_status()
+    cc = ChemcadController().get_status()
+    pr = ProIIController().get_status()
+    ct = CanteraController().get_status()
+    us = UniSimController().get_status()
 
     return {
         "suite": "Agentic ChemEng Multi-Discipline Engineering Architecture",
@@ -46,6 +54,10 @@ def get_system_status():
             "aspen_plus_simulation": ap,
             "aspen_hysys_simulation": ah,
             "dwsim_open_source_simulation": dw,
+            "chemcad_simulation": cc,
+            "proii_simulation": pr,
+            "cantera_kinetics_transport": ct,
+            "unisim_simulation": us,
             "autocad_drafting": ac,
             "thermo_engine": {"status": "operational", "standards": ["ASME STEAM-TA", "Peng-Robinson EOS"]},
             "hydraulics_engine": {"status": "operational", "standards": ["Darcy-Weisbach", "ASME B36.10M", "Crane TP 410"]},
@@ -76,6 +88,10 @@ def main():
     subparsers.add_parser("aspen-plus", help="Aspen Plus V14 chemical simulation")
     subparsers.add_parser("aspen-hysys", help="Aspen HYSYS simulation & thermodynamic packages")
     subparsers.add_parser("dwsim", help="DWSIM open-source process simulator")
+    subparsers.add_parser("chemcad", help="Chemstations CHEMCAD process simulation")
+    subparsers.add_parser("proii", help="AVEVA SimSci PRO/II refinery & chemical simulation")
+    subparsers.add_parser("cantera", help="Cantera chemical kinetics, thermodynamics & transport")
+    subparsers.add_parser("unisim", help="Honeywell UniSim Design process simulation")
     subparsers.add_parser("autocad", help="Autodesk AutoCAD 2025 drafting & vector tools")
     subparsers.add_parser("thermo", help="Rigorous thermodynamics (ASME Steam & Peng-Robinson)")
     subparsers.add_parser("hydraulics", help="Process hydraulics (Darcy-Weisbach, Pump TDH, NPSHa)")
@@ -108,6 +124,18 @@ def main():
     elif args.subsystem == "dwsim":
         from .dwsim.cli import main as dw_cli
         dw_cli()
+    elif args.subsystem == "chemcad":
+        from .chemcad.cli import main as cc_cli
+        cc_cli()
+    elif args.subsystem == "proii":
+        from .proii.cli import main as pr_cli
+        pr_cli()
+    elif args.subsystem == "cantera":
+        from .cantera.cli import main as ct_cli
+        ct_cli()
+    elif args.subsystem == "unisim":
+        from .unisim.cli import main as us_cli
+        us_cli()
     elif args.subsystem == "autocad":
         from .autocad.cli import main as ac_cli
         ac_cli()

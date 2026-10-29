@@ -20,8 +20,19 @@ import sys
 import threading
 import time
 import traceback
-import pythoncom
-import win32com.client
+
+IS_WINDOWS = sys.platform == "win32"
+
+if IS_WINDOWS:
+    try:
+        import pythoncom
+        import win32com.client
+    except ImportError:
+        pythoncom = None
+        win32com = None
+else:
+    pythoncom = None
+    win32com = None
 
 
 class EngineeringTimeoutError(RuntimeError):
@@ -38,7 +49,9 @@ _com_lock = threading.Lock()
 
 
 def ensure_com_initialized():
-    """Idempotently initializes the Windows COM apartment on the calling thread."""
+    """Idempotently initializes the Windows COM apartment on Windows; safe no-op on Linux/macOS."""
+    if not IS_WINDOWS or pythoncom is None:
+        return
     with _com_lock:
         try:
             pythoncom.CoInitialize()
@@ -139,24 +152,34 @@ def validate_file_path(filepath, allowed_extensions=None, must_exist=True):
 
 def cleanup_stale_processes(process_names=("SLDWORKS.exe", "accoreconsole.exe"), max_age_seconds=600):
     """
-    Terminates stale or frozen CAD processes that leak into the background.
+    Terminates stale or frozen processes that leak into the background on Windows or Linux.
     """
     killed = []
-    try:
-        cmd = ["tasklist", "/FO", "CSV", "/NH"]
-        out = subprocess.check_output(cmd, text=True, stderr=subprocess.DEVNULL)
-        for line in out.splitlines():
-            parts = [p.strip('"') for p in line.split('","')]
-            if len(parts) >= 2:
-                name, pid = parts[0], parts[1]
-                if name in process_names:
-                    try:
-                        subprocess.run(["taskkill", "/F", "/PID", pid], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
-                        killed.append(f"{name} (PID: {pid})")
-                    except Exception:
-                        pass
-    except Exception:
-        pass
+    if IS_WINDOWS:
+        try:
+            cmd = ["tasklist", "/FO", "CSV", "/NH"]
+            out = subprocess.check_output(cmd, text=True, stderr=subprocess.DEVNULL)
+            for line in out.splitlines():
+                parts = [p.strip('"') for p in line.split('","')]
+                if len(parts) >= 2:
+                    name, pid = parts[0], parts[1]
+                    if name in process_names:
+                        try:
+                            subprocess.run(["taskkill", "/F", "/PID", pid], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                            killed.append(f"{name} (PID: {pid})")
+                        except Exception:
+                            pass
+        except Exception:
+            pass
+    else:
+        # POSIX process cleanup
+        for pname in process_names:
+            base_pname = pname.replace(".exe", "")
+            try:
+                subprocess.run(["pkill", "-f", base_pname], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+                killed.append(base_pname)
+            except Exception:
+                pass
     return killed
 
 

@@ -25,7 +25,7 @@ classifiers = [
 ]
 requires-python = ">=3.10"
 dependencies = [
-    "pywin32>=306"
+    "pywin32>=306; sys_platform == 'win32'"
 ]
 
 [project.optional-dependencies]
@@ -39,6 +39,10 @@ solidworks-cli = "agentic_chemeng.solidworks.cli:main"
 aspen-plus-cli = "agentic_chemeng.aspen_plus.cli:main"
 aspen-hysys-cli = "agentic_chemeng.aspen_hysys.cli:main"
 dwsim-cli = "agentic_chemeng.dwsim.cli:main"
+chemcad-cli = "agentic_chemeng.chemcad.cli:main"
+proii-cli = "agentic_chemeng.proii.cli:main"
+cantera-cli = "agentic_chemeng.cantera.cli:main"
+unisim-cli = "agentic_chemeng.unisim.cli:main"
 autocad-cli = "agentic_chemeng.autocad.cli:main"
 thermo-cli = "agentic_chemeng.thermo.cli:main"
 hydraulics-cli = "agentic_chemeng.hydraulics.cli:main"
