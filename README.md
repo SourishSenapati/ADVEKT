@@ -16,12 +16,13 @@
 [![CLI Binaries](https://img.shields.io/badge/CLI-21%20Executables-00bcd4.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
 [![Tests Passing](https://img.shields.io/badge/tests-60%2F60%20passed%20(100%25)-brightgreen.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
 [![Circuit Breaker](https://img.shields.io/badge/RAEBYES-Invariant%20Protected-orange.svg?style=flat-square)](https://github.com/SourishSenapati/RAEBYES)
-[![License](https://img.shields.io/badge/license-Apache--2.0-green.svg?style=flat-square)](LICENSE)
+[![License](https://img.shields.io/badge/license-Commercial%20%26%20IP%20Protection%20v1.0-red.svg?style=flat-square)](LICENSE)
+[![Monetization Protected](https://img.shields.io/badge/monetization-IP%20Reserved%20(Sourish%20Senapati)-blueviolet.svg?style=flat-square)](LICENSE)
 [![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20Linux%20%7C%20macOS-lightgrey.svg?style=flat-square)](https://github.com/SourishSenapati/ADVEKT)
 
 *Project Ref:* `FNQ-PR-2026-001`  
 *Lead Chemical & Process Engineer:* **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*)  
-*License:* Apache-2.0  
+*License:* ADVEKT Source-Available Commercial & IP Protection License v1.0 (Non-Commercial/Academic Free; Commercial License Required)    
 
 ---
 
@@ -484,7 +485,30 @@ Configure your AI coding assistant to use `advekt-mcp`:
 
 ---
 
-## 11. Technical Standards Attribution
+## 11. Intellectual Property Ownership, Commercial Licensing & Monetization Covenant
+
+`ADVEKT` is released under the **ADVEKT Source-Available Commercial & Intellectual Property Protection License v1.0** ([`LICENSE`](LICENSE)).
+
+### 1. 100% Retained Intellectual Property
+All intellectual property, copyrights, patent rights, trade dress, trademarks, and trade secrets in `ADVEKT` (`advekt`), its 60 MCP tools, 21 CLI executables, and mathematical solvers are exclusively and solely owned by **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*). No title or transfer of IP is granted.
+
+### 2. Free for Personal, Non-Commercial & Academic Research
+You are free to inspect, download, test, benchmark, and evaluate `ADVEKT` for individual personal projects, non-profit academic research, and classroom education without charge.
+
+### 3. Strict Commercial & Paid Product Restriction (Monetization Protection)
+* **Anti-Parasitic & Paid Wrapper Clause:** If any third party, startup, corporation, or individual launches, sells, markets, hosts, or monetizes any paid product, commercial software bundle, SaaS platform, agent-as-a-service, paid API wrapper, or consulting deliverable that incorporates, embeds, or derives from `ADVEKT` (in whole or in part), **you are legally required to obtain a Commercial License and execute a formal revenue-sharing / royalty agreement with Sourish Senapati prior to launch or commercial distribution**.
+* **Remedies for Unlicensed Commercial Exploitation:** Willful commercial infringement entitles Sourish Senapati to immediate injunctive relief, full disgorgement of all gross commercial revenues and subscriber proceeds, statutory damages, and mandatory legal fee reimbursement.
+
+### 4. Commercial & Enterprise Licensing Inquiries
+For commercial licensing, enterprise multi-seat deployment, OEM bundling, proprietary process bindings, or revenue-sharing agreements, contact:
+* **Lead Engineer & IP Owner:** Sourish Senapati
+* **Email:** `sourishsenapati791@gmail.com` / `engineering@finnoaq.com`
+* **Entity:** FinnoaQ Agro-Industrial Technologies Ltd.
+* **Project Reference:** `FNQ-PR-2026-001`
+
+---
+
+## 12. Technical Standards Attribution
 
 - **Lead Chemical & Process Engineer:** Sourish Senapati (*FinnoaQ Agro-Industrial Technologies Ltd.*)
 - **Governing Project Reference:** `FNQ-PR-2026-001`

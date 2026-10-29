@@ -13,6 +13,8 @@ import agentic_chemeng as _backend
 
 __version__ = "1.0.0"
 __author__ = "Sourish Senapati"
+__copyright__ = "Copyright (c) 2026 Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.). All Rights Reserved."
+__license__ = "ADVEKT Commercial & Intellectual Property Protection License v1.0"
 __project_ref__ = "FNQ-PR-2026-001"
 
 # Expose core modules directly under advekt namespace
@@ -36,3 +38,4 @@ import agentic_chemeng.comsol as comsol
 import agentic_chemeng.ansys as ansys
 import agentic_chemeng.raebyes as raebyes
 import agentic_chemeng.resilience as resilience
+
