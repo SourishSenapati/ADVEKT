@@ -1,0 +1,52 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "agentic-chemeng"
+version = "1.0.0"
+description = "Autonomous Multi-Discipline Chemical & Mechanical Engineering CLI and Model Context Protocol (MCP) Suite"
+readme = "README.md"
+authors = [
+    { name = "Sourish Senapati", email = "engineering@finnoaq.com" }
+]
+license = { text = "Apache-2.0" }
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Manufacturing",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Operating System :: Microsoft :: Windows"
+]
+requires-python = ">=3.10"
+dependencies = [
+    "pywin32>=306"
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.0.0"
+]
+
+[project.scripts]
+agentic-chemeng = "agentic_chemeng.cli:main"
+solidworks-cli = "agentic_chemeng.solidworks.cli:main"
+aspen-plus-cli = "agentic_chemeng.aspen_plus.cli:main"
+aspen-hysys-cli = "agentic_chemeng.aspen_hysys.cli:main"
+dwsim-cli = "agentic_chemeng.dwsim.cli:main"
+autocad-cli = "agentic_chemeng.autocad.cli:main"
+thermo-cli = "agentic_chemeng.thermo.cli:main"
+hydraulics-cli = "agentic_chemeng.hydraulics.cli:main"
+thermal-cli = "agentic_chemeng.thermal.cli:main"
+pv-cli = "agentic_chemeng.pressure_vessel.cli:main"
+chemeng-mcp = "agentic_chemeng.mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["agentic_chemeng*"]
+
