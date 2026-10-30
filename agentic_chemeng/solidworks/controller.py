@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - SolidWorks 2025 Autonomous Controller (Industrial Hardened)
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces directly with Dassault Systèmes SOLIDWORKS 2025 SP1.2 COM API (SldWorks.Application).
 Zero synthetic approximations — all geometry and metadata originate from authentic B-Rep solids.
@@ -100,8 +100,8 @@ class SolidWorksController:
                     "open_document_count": 0,
                     "open_documents": [],
                     "notice": "SolidWorks COM server is registered. Engine launches automatically on 'open', 'inspect', or 'rebuild'.",
-                    "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                    "project_ref": "FNQ-PR-2026-001"
+                    "lead_engineer": "Sourish Senapati",
+                    "project_ref": "ADVEKT-CAE-2026"
                 }
 
             try:
@@ -132,8 +132,8 @@ class SolidWorksController:
                     "active_document_path": active_path,
                     "open_document_count": doc_count,
                     "open_documents": open_docs,
-                    "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                    "project_ref": "FNQ-PR-2026-001"
+                    "lead_engineer": "Sourish Senapati",
+                    "project_ref": "ADVEKT-CAE-2026"
                 }
             except Exception as e:
                 return {

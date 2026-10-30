@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - COMSOL Multiphysics Chemical Reaction & Transport Phenomena Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with COMSOL Multiphysics via batch CLI execution (comsol batch / comsol.exe -run)
 and headless .mph archive inspection. Specialized in multiphysics modeling:
@@ -88,8 +88,8 @@ class ComsolController:
                 "Electrochemistry & Secondary Current Distribution (cd)"
             ],
             "supported_formats": [".mph"],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def inspect_model(self, filepath):
@@ -173,8 +173,8 @@ class ComsolController:
             parameters=parameters,
             mesh_statistics=mesh_stats,
             epistemic_classification="OFFLINE_AUDIT",
-            lead_process_engineer="Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            project_ref="FNQ-PR-2026-001"
+            lead_process_engineer="Sourish Senapati",
+            project_ref="ADVEKT-CAE-2026"
         )
 
     def run_study(self, filepath=None, study_tag=None, output_path=None, timeout_sec=120.0):
@@ -190,12 +190,12 @@ class ComsolController:
                 status="unlicensed_or_missing",
                 message=(
                     "COMSOL Multiphysics executable was not detected on this system. "
-                    "In compliance with FinnoaQ operational rules (AGENTS.md Track A), synthetic mock execution "
+                    "In compliance with engineering verification rules, synthetic mock execution "
                     "is strictly prohibited. Headless .mph structural auditing is fully operational."
                 ),
                 epistemic_classification="BLOCKED",
                 model_path=filepath,
-                lead_process_engineer="Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+                lead_process_engineer="Sourish Senapati"
             )
 
         if filepath:

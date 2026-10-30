@@ -3,8 +3,7 @@ ADVEKT: The Autonomous Multi-Discipline Chemical & Mechanical Engineering CAE Su
 with Native RAEBYES Circuit Breaking.
 
 The Invariant Velocity Field of Continuous Matter.
-Project Ref: FNQ-PR-2026-001
-Lead Chemical & Process Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 """
 
 import sys
@@ -13,9 +12,8 @@ import agentic_chemeng as _backend
 
 __version__ = "1.0.0"
 __author__ = "Sourish Senapati"
-__copyright__ = "Copyright (c) 2026 Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.). All Rights Reserved."
+__copyright__ = "Copyright (c) 2026 Sourish Senapati. All Rights Reserved."
 __license__ = "ADVEKT Commercial & Intellectual Property Protection License v1.0"
-__project_ref__ = "FNQ-PR-2026-001"
 
 # Expose core modules directly under advekt namespace
 import agentic_chemeng.cli as cli

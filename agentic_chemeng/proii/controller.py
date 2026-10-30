@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - AVEVA SimSci PRO/II Autonomous Simulation Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with AVEVA / Schneider Electric SimSci PRO/II via COM Automation (PROII.Application)
 and offline PRZ flowsheet archive inspection. Supports rigorous refining, gas processing,
@@ -46,8 +46,8 @@ class ProIIController:
                 "com_registered": False,
                 "proii_version": "PRO/II COM is Windows-only; offline .prz parsing active on Linux",
                 "supported_formats": [".prz", ".pr2", ".inp"],
-                "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                "governing_project": "FNQ-PR-2026-001"
+                "lead_process_engineer": "Sourish Senapati",
+                "governing_project": "ADVEKT-CAE-2026"
             }
 
         ensure_com_initialized()
@@ -73,8 +73,8 @@ class ProIIController:
             "com_registered": com_active,
             "proii_version": version_str,
             "supported_formats": [".prz", ".pr2", ".inp"],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def inspect_flowsheet(self, filepath):

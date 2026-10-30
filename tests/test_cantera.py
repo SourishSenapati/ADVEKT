@@ -12,7 +12,7 @@ def test_cantera_status():
     assert "status" in status
     assert "supported_capabilities" in status
     assert len(status["supported_capabilities"]) >= 5
-    assert status["lead_process_engineer"] == "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+    assert status["lead_process_engineer"] == "Sourish Senapati"
 
 
 def test_cantera_arrhenius_kinetics():

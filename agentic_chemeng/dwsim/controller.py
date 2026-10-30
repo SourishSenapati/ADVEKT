@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - DWSIM Autonomous Open-Source Process Simulation Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with DWSIM Open-Source Chemical Process Simulator (v8/v9).
 Inspects DWSIM XML flowsheets (.dwxml, .dwsim), extracts property packages (PR, NRTL, SRK),
@@ -72,8 +72,8 @@ class DwsimController:
                 "Component Separator",
                 "Filter / Centrifuge"
             ],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def inspect_flowsheet(self, filepath):

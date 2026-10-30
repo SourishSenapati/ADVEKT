@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Industrial Thermal & Heat Transfer Design Engine
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Provides rigorous industrial calculations:
 1. TEMA Shell-and-Tube heat exchanger rating (Kern method / Bell-Delaware method).

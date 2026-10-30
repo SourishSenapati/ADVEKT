@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - RAEBYES Deterministic Invariant Circuit Breaker & Daemon Protocol
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 Specification: SourishSenapati/RAEBYES (https://github.com/SourishSenapati/RAEBYES)
 
 Implements the RAEBYES protocol to make AI coding and scientific agents physically

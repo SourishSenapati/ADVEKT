@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - CHEMCAD Autonomous Chemical Process Simulation Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with Chemstations CHEMCAD (v7/v8) via COM Automation (CHEMCAD.Application)
 and offline XML/CCX flowsheet inspection. Supports batch distillation, reactors,
@@ -46,8 +46,8 @@ class ChemcadController:
                 "com_registered": False,
                 "chemcad_version": "CHEMCAD COM is Windows-only; offline .ccx parsing active on Linux",
                 "supported_formats": [".ccx", ".cc5", ".cc6"],
-                "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                "governing_project": "FNQ-PR-2026-001"
+                "lead_process_engineer": "Sourish Senapati",
+                "governing_project": "ADVEKT-CAE-2026"
             }
 
         ensure_com_initialized()
@@ -73,8 +73,8 @@ class ChemcadController:
             "com_registered": com_active,
             "chemcad_version": version_str,
             "supported_formats": [".ccx", ".cc5", ".cc6"],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def inspect_flowsheet(self, filepath):

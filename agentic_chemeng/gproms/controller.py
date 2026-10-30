@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Siemens gPROMS Advanced Process Modeling & Digital Twin Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with Siemens / PSE gPROMS ProcessBuilder & ModelBuilder via COM/API,
 batch CLI dispatch (gproms.exe -batch), and headless .gPJ / .gPA project archive inspection.
@@ -93,8 +93,8 @@ class GpromsController:
             "com_registered": com_active,
             "gproms_version": version_str,
             "supported_formats": [".gPJ", ".gPA", ".xml", ".txt"],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def inspect_project(self, filepath):
@@ -149,8 +149,8 @@ class GpromsController:
             estimated_equations_count=equation_count,
             solver_architecture="Siemens gPROMS Equation-Oriented DAE/PDE Solver",
             epistemic_classification="OFFLINE_AUDIT",
-            lead_process_engineer="Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            project_ref="FNQ-PR-2026-001"
+            lead_process_engineer="Sourish Senapati",
+            project_ref="ADVEKT-CAE-2026"
         )
 
     def _parse_gproms_text_or_xml(self, content, models, processes, tasks, var_types, param_ests):
@@ -200,12 +200,12 @@ class GpromsController:
                 status="unlicensed_or_missing",
                 message=(
                     "Siemens gPROMS executable was not detected in PATH or standard installation directories. "
-                    "In compliance with FinnoaQ operational rules (AGENTS.md Track A), synthetic mock execution "
+                    "In compliance with engineering verification rules, synthetic mock execution "
                     "is strictly prohibited. Offline project topology auditing is fully operational."
                 ),
                 epistemic_classification="BLOCKED",
                 project_path=filepath,
-                lead_process_engineer="Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+                lead_process_engineer="Sourish Senapati"
             )
 
         if filepath:

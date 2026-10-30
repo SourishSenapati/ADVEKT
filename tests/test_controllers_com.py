@@ -21,7 +21,7 @@ def test_aspen_plus_controller_status():
     ap = AspenPlusController()
     status = ap.get_status()
     assert "com_registered" in status
-    assert status["lead_process_engineer"] == "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+    assert status["lead_process_engineer"] == "Sourish Senapati"
 
 
 def test_aspen_hysys_controller_status():

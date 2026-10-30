@@ -36,7 +36,7 @@ def test_mcp_initialize():
     resp = json.loads(process_message(req))
     assert resp["id"] == 1
     assert "serverInfo" in resp["result"]
-    assert resp["result"]["serverInfo"]["lead_engineer"] == "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+    assert resp["result"]["serverInfo"]["lead_engineer"] == "Sourish Senapati"
 
 
 def test_mcp_tools_list():

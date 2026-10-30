@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Example: ASME Section VIII Div 1 Pressure Vessel Design
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 """
 
 import json

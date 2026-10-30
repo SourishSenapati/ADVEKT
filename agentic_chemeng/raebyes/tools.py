@@ -81,8 +81,8 @@ def dispatch_raebyes_tool(tool_name: str, args: Dict[str, Any]) -> Dict[str, Any
             "call_history_count": len(CIRCUIT_BREAKER.call_history),
             "breach_count": CIRCUIT_BREAKER.breach_count,
             "daemon": daemon_status,
-            "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "project_ref": "FNQ-PR-2026-001"
+            "lead_engineer": "Sourish Senapati",
+            "project_ref": "ADVEKT-CAE-2026"
         }
     raise ValueError(f"Unknown RAEBYES tool: {tool_name}")
 

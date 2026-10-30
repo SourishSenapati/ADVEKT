@@ -1,6 +1,6 @@
 """
-Agentic ChemEng - Autonomous Multi-Discipline Chemical & Mechanical Engineering CLI
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+ADVEKT - Autonomous Multi-Discipline Chemical & Mechanical Engineering CLI
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Unified command-line gateway coordinating:
 1. solidworks       : Dassault Systèmes SOLIDWORKS 2025 B-Rep CAD automation
@@ -53,8 +53,7 @@ def get_system_status():
     return {
         "suite": "ADVEKT Autonomous Multi-Discipline Engineering Architecture",
         "version": "1.0.0",
-        "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-        "project_ref": "FNQ-PR-2026-001",
+        "lead_engineer": "Sourish Senapati",
         "registered_mcp_tools_count": len(ALL_TOOLS),
         "subsystems": {
             "solidworks_cad": sw,

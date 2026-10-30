@@ -8,7 +8,7 @@ version = "1.0.0"
 description = "ADVEKT: Autonomous Multi-Discipline Chemical & Mechanical Engineering CAE Suite with Native RAEBYES Circuit Breaking"
 readme = "README.md"
 authors = [
-    { name = "Sourish Senapati", email = "engineering@finnoaq.com" }
+    { name = "Sourish Senapati", email = "sourishsenapati791@gmail.com" }
 ]
 license = { text = "ADVEKT Commercial & IP Protection License v1.0 (Non-Commercial Free / Commercial License Required)" }
 classifiers = [

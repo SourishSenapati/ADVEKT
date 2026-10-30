@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Example: AI Agent JSON-RPC MCP Client
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 """
 
 import json

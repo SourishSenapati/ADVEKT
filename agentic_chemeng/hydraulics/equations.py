@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - First-Principles Process Hydraulics Engine
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Provides rigorous industrial calculations:
 1. ASME B36.10M / B36.19M standard pipe schedule dimension lookup (DN15 - DN600).

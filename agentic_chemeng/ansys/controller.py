@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Ansys Fluent & CFX Reacting Flow & Chemical CFD Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with Ansys Fluent & CFX via headless batch journal execution
 (fluent 3ddp -g -i <journal.jou> / cfx5solve) and pure-Python case file (.cas, .cas.gz, .msh) inspection.
@@ -107,8 +107,8 @@ class AnsysController:
                 "Radiation (Discrete Ordinates, P1)"
             ],
             "supported_formats": [".cas", ".cas.gz", ".cas.h5", ".def", ".cfx", ".msh", ".jou"],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def inspect_case(self, filepath):
@@ -202,8 +202,8 @@ class AnsysController:
             boundary_conditions=boundary_conditions,
             physical_models=list(set(physical_models)),
             epistemic_classification="OFFLINE_AUDIT",
-            lead_process_engineer="Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            project_ref="FNQ-PR-2026-001"
+            lead_process_engineer="Sourish Senapati",
+            project_ref="ADVEKT-CAE-2026"
         )
 
     def _is_gzipped(self, filepath):
@@ -227,12 +227,12 @@ class AnsysController:
                 status="unlicensed_or_missing",
                 message=(
                     "Ansys Fluent executable was not detected on this system. "
-                    "In compliance with FinnoaQ operational rules (AGENTS.md Track A), synthetic mock CFD calculations "
+                    "In compliance with engineering verification rules, synthetic mock CFD calculations "
                     "are strictly prohibited. Headless case file structure auditing is fully operational."
                 ),
                 epistemic_classification="BLOCKED",
                 journal_path=journal_path,
-                lead_process_engineer="Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+                lead_process_engineer="Sourish Senapati"
             )
 
         abs_journal = validate_file_path(journal_path, allowed_extensions=[".jou", ".txt"], must_exist=True)

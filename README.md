@@ -22,7 +22,7 @@
 [![RAEBYES](https://img.shields.io/badge/RAEBYES-Invariant%20Guarded-F97316?style=for-the-badge)](https://github.com/SourishSenapati/RAEBYES)
 [![License](https://img.shields.io/badge/License-Commercial%20%26%20IP%20Protected-EF4444?style=for-the-badge)](LICENSE)
 
-*Project Ref:* `FNQ-PR-2026-001` • *Lead Chemical & Process Engineer:* **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*)  
+*Lead Chemical & Process Engineer:* **Sourish Senapati**  
 *License:* **ADVEKT Commercial & Intellectual Property Protection License v1.0** (Free for Personal & Academic Use / Commercial License Required)
 
 ---
@@ -494,7 +494,7 @@ assert guard["passed"] is True, "Circuit breaker tripped: mass balance closure v
 `ADVEKT` is released under the **ADVEKT Source-Available Commercial & Intellectual Property Protection License v1.0** ([`LICENSE`](LICENSE)).
 
 ### 1. 100% Retained Intellectual Property
-All intellectual property, copyrights, patent rights, trade dress, trademarks, and trade secrets in `ADVEKT` (`advekt`), its 60 MCP tools, 21 CLI executables, and mathematical solvers are exclusively and solely owned by **Sourish Senapati** (*FinnoaQ Agro-Industrial Technologies Ltd.*). No transfer of IP is granted.
+All intellectual property, copyrights, patent rights, trade dress, trademarks, and trade secrets in `ADVEKT` (`advekt`), its 60 MCP tools, 21 CLI executables, and mathematical solvers are exclusively and solely owned by **Sourish Senapati**. No transfer of IP is granted.
 
 ### 2. Free for Personal, Non-Commercial & Academic Research
 You are free to inspect, download, test, benchmark, and evaluate `ADVEKT` for individual personal projects, non-profit academic research, and classroom education without charge.
@@ -506,16 +506,14 @@ You are free to inspect, download, test, benchmark, and evaluate `ADVEKT` for in
 ### 4. Commercial & Enterprise Licensing Inquiries
 For commercial licensing, enterprise multi-seat deployment, OEM bundling, proprietary process bindings, or revenue-sharing agreements, contact:
 * **Lead Chemical & Process Engineer / IP Owner:** Sourish Senapati
-* **Email:** `sourishsenapati791@gmail.com` / `engineering@finnoaq.com`
-* **Entity:** FinnoaQ Agro-Industrial Technologies Ltd.
-* **Project Reference:** `FNQ-PR-2026-001`
+* **Email:** `sourishsenapati791@gmail.com`
+* **GitHub:** https://github.com/SourishSenapati/ADVEKT
 
 ---
 
 ## 11. Technical Standards Attribution
 
-- **Lead Chemical & Process Engineer:** Sourish Senapati (*FinnoaQ Agro-Industrial Technologies Ltd.*)
-- **Governing Project Reference:** `FNQ-PR-2026-001`
+- **Lead Chemical & Process Engineer:** Sourish Senapati
 - **Thermodynamic Standards:** ASME STEAM-TA (1967 Formulation), IAPWS Industrial Formulation (1997), Peng-Robinson Cubic Equation of State (1976).
 - **Hydraulic Standards:** ASME B36.10M / B36.19M Welded and Seamless Wrought Steel Pipe, Crane Technical Paper No. 410, Hydraulic Institute (HI) Standards.
 - **Thermal Standards:** Tubular Exchanger Manufacturers Association (TEMA 10th Edition), Kern Method.

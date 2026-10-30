@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Honeywell UniSim Design Autonomous Simulation Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with Honeywell UniSim Design via COM Automation (UniSimDesign.Application)
 and offline simulation case inspection. Supports refining, gas processing, and LNG plants.
@@ -43,8 +43,8 @@ class UniSimController:
                 "com_registered": False,
                 "unisim_version": "UniSim COM is Windows-only; offline case parsing active on Linux",
                 "supported_formats": [".usc", ".hsc"],
-                "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                "governing_project": "FNQ-PR-2026-001"
+                "lead_process_engineer": "Sourish Senapati",
+                "governing_project": "ADVEKT-CAE-2026"
             }
 
         ensure_com_initialized()
@@ -70,8 +70,8 @@ class UniSimController:
             "com_registered": com_active,
             "unisim_version": version_str,
             "supported_formats": [".usc", ".hsc"],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def inspect_case(self, filepath):

@@ -12,5 +12,5 @@ def test_proii_status():
     assert "status" in status
     assert "proii_version" in status
     assert ".prz" in status["supported_formats"]
-    assert status["lead_process_engineer"] == "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+    assert status["lead_process_engineer"] == "Sourish Senapati"
 

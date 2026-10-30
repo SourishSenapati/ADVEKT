@@ -12,7 +12,7 @@ def test_dwsim_get_status():
     assert "supported_property_packages" in status
     assert len(status["supported_property_packages"]) >= 5
     assert "supported_unit_operations" in status
-    assert status["lead_process_engineer"] == "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+    assert status["lead_process_engineer"] == "Sourish Senapati"
 
 
 def test_dwsim_flash_calculation():

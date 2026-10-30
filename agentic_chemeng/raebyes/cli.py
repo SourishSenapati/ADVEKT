@@ -45,7 +45,7 @@ def main():
                 "breach_count": CIRCUIT_BREAKER.breach_count,
                 "daemon": CIRCUIT_BREAKER.check_daemon_status(),
                 "governing_protocol": "SourishSenapati/RAEBYES",
-                "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+                "lead_engineer": "Sourish Senapati"
             }
         elif args.command == "check-mass":
             res = CIRCUIT_BREAKER.verify_mass_conservation(

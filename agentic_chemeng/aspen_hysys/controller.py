@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Aspen HYSYS Autonomous Simulation Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces directly with Aspen Technology Aspen HYSYS via COM Automation (HYSYS.Application).
 Provides programmatic inspection of dynamic & steady-state hydrocarbon/chemical flowsheets,
@@ -58,8 +58,8 @@ class AspenHysysController:
             "active_case": active_case_name,
             "prog_id": "HYSYS.Application",
             "supported_formats": [".hsc"],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def open_case(self, filepath):

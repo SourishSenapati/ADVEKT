@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Rigorous Chemical Engineering Thermodynamics Engine
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 First-principles thermodynamic equations:
 1. ASME STEAM-TA / IAPWS Formulation for Saturated and Superheated Steam & Water.

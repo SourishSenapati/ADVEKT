@@ -1,6 +1,6 @@
 """
-Agentic ChemEng - Unified Chemical & Mechanical Engineering MCP Server (Industrial Hardened)
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+ADVEKT - Unified Chemical & Mechanical Engineering MCP Server
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Exposes a comprehensive Model Context Protocol (MCP) JSON-RPC 2.0 server across:
 1. Dassault Systèmes SOLIDWORKS 2025 (Parametric 3D B-Rep CAD, assemblies, BPE, mass properties).
@@ -438,8 +438,7 @@ def process_message(line):
             "serverInfo": {
                 "name": SERVER_NAME,
                 "version": SERVER_VERSION,
-                "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                "project_ref": "FNQ-PR-2026-001"
+                "lead_engineer": "Sourish Senapati"
             }
         })
 

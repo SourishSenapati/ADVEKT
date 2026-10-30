@@ -1,6 +1,6 @@
 """
-Agentic ChemEng - Industrial Resilience, Timeout Guards & Fault-Tolerant COM Engine
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+ADVEKT - Industrial Resilience, Timeout Guards & Fault-Tolerant Engine
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Provides fail-safe guarantees:
 1. Hard execution timeouts on all COM / external engine calls (no indefinite hangs).
@@ -200,8 +200,7 @@ def build_response(success=True, data=None, error=None, metadata=None, status=No
         "status": status_val,
         "timestamp": now_iso,
         "timestamp_utc": now_iso,
-        "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-        "project_ref": "FNQ-PR-2026-001"
+        "lead_engineer": "Sourish Senapati"
     }
 
     if is_success:

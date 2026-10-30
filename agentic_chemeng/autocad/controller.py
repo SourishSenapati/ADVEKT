@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Autodesk AutoCAD 2025 Autonomous Controller (Industrial Hardened)
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces directly with Autodesk AutoCAD 2025 via COM API (AutoCAD.Application)
 and the high-speed headless console engine (accoreconsole.exe).
@@ -72,8 +72,8 @@ class AutoCADController:
                 "active_document": active_doc,
                 "accoreconsole_available": bool(console_path),
                 "accoreconsole_path": console_path,
-                "lead_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                "project_ref": "FNQ-PR-2026-001"
+                "lead_engineer": "Sourish Senapati",
+                "project_ref": "ADVEKT-CAE-2026"
             }
 
     def run_script(self, drawing_path, script_commands, timeout_sec=60):

@@ -12,5 +12,5 @@ def test_unisim_status():
     assert "status" in status
     assert "unisim_version" in status
     assert ".usc" in status["supported_formats"]
-    assert status["lead_process_engineer"] == "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+    assert status["lead_process_engineer"] == "Sourish Senapati"
 

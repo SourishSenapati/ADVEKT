@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - ASME BPVC Section VIII Division 1 Pressure Vessel Engine
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Provides rigorous mechanical engineering derivations:
 1. UG-27(c)(1): Cylindrical Shell Thickness under Internal Pressure.

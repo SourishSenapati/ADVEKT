@@ -12,5 +12,5 @@ def test_chemcad_status():
     assert "status" in status
     assert "chemcad_version" in status
     assert ".ccx" in status["supported_formats"]
-    assert status["lead_process_engineer"] == "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)"
+    assert status["lead_process_engineer"] == "Sourish Senapati"
 

@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Cantera Autonomous Chemical Kinetics, Thermodynamics & Transport Controller
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with Cantera (open-source chemical physics suite) for chemical reaction kinetics,
 multi-component gas transport properties, and chemical equilibrium.
@@ -47,8 +47,8 @@ class CanteraController:
                 "Multi-Component Transport Properties (Viscosity, Conductivity, Binary Diffusion)",
                 "Premixed & Non-Premixed Laminar Flames"
             ],
-            "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-            "governing_project": "FNQ-PR-2026-001"
+            "lead_process_engineer": "Sourish Senapati",
+            "governing_project": "ADVEKT-CAE-2026"
         }
 
     def calculate_arrhenius_kinetics(self, A_pre_exponential, Ea_kJ_mol, temperature_C, order=1.0, initial_conc_mol_m3=100.0, time_seconds=60.0):

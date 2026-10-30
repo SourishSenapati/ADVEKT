@@ -1,6 +1,6 @@
 """
 Agentic ChemEng - Aspen Plus V14 Autonomous Process Simulation Controller (Industrial Hardened)
-Project Ref: FNQ-PR-2026-001 | Lead Engineer: Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
+Lead Chemical & Process Engineer: Sourish Senapati
 
 Interfaces with Aspen Technology Aspen Plus V14 / V40 OLE Automation Services (Apwn.Document).
 Hardened against licensing timeouts, OLE disconnects (0x80010108), and corrupt files.
@@ -54,8 +54,8 @@ class AspenPlusController:
                 "license_available": False,
                 "license_notice": "Sentinel / SLM License required for live solver execution (Converged offline cases fully supported)",
                 "active_simulation_file": self._active_file,
-                "lead_process_engineer": "Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)",
-                "governing_project": "FNQ-PR-2026-001"
+                "lead_process_engineer": "Sourish Senapati",
+                "governing_project": "ADVEKT-CAE-2026"
             }
 
     def open_simulation(self, filepath):
@@ -119,7 +119,7 @@ class AspenPlusController:
 
     def inspect_flowsheet(self, filepath=None):
         """Inspects unit operations, thermodynamic property methods, and convergence summary."""
-        fp = filepath or self._active_file or "engineering/aspen/FINNOAQ_15TPD_CONVERGED.bkp"
+        fp = filepath or self._active_file or "engineering/aspen/converged_case.bkp"
         open_info = self.open_simulation(fp) if not self._active_file else {"file_path": self._active_file}
 
         extract = self._load_converged_extract()

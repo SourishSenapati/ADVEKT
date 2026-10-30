@@ -1,8 +1,7 @@
 ADVEKT SOURCE-AVAILABLE COMMERCIAL & INTELLECTUAL PROPERTY PROTECTION LICENSE
 Version 1.0 (October 2026)
 
-Copyright (c) 2026 Sourish Senapati (FinnoaQ Agro-Industrial Technologies Ltd.)
-Project Reference: FNQ-PR-2026-001
+Copyright (c) 2026 Sourish Senapati
 All Rights Reserved.
 
 ================================================================================
@@ -26,8 +25,7 @@ TERMS AND CONDITIONS
 
 1. DEFINITIONS
 
-"Copyright Holder" means Sourish Senapati (and designated holding entities, including 
-FinnoaQ Agro-Industrial Technologies Ltd.).
+"Copyright Holder" means Sourish Senapati.
 
 "Software" means the ADVEKT codebase, libraries, packages (`advekt`, `agentic_chemeng`),
 MCP tools, CLI binaries, algorithms, data structures, and associated documentation.
@@ -104,7 +102,7 @@ or rely on the Software remain subject to the commercial restrictions of this Li
 --------------------------------------------------------------------------------
 
 This License does not grant You any right to use the trademarks, trade names, service 
-marks, or logos of the Copyright Holder ("ADVEKT", "FinnoaQ", "RAEBYES") for 
+marks, or logos of the Copyright Holder ("ADVEKT", "RAEBYES") for 
 advertising, endorsement, or commercial marketing without prior written consent. 
 
 All public forks, academic papers, and presentations utilizing the Software must 
@@ -147,7 +145,5 @@ waivers, custom physics bindings, or monetization agreements, contact:
 
 Sourish Senapati
 Lead Chemical & Process Engineer
-FinnoaQ Agro-Industrial Technologies Ltd.
-Email: sourishsenapati791@gmail.com / engineering@finnoaq.com
-Project Reference: FNQ-PR-2026-001
+Email: sourishsenapati791@gmail.com
 GitHub: https://github.com/SourishSenapati/ADVEKT
